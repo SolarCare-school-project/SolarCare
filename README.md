@@ -1,6 +1,6 @@
 # SolarCare
 
-What is SolarCare? - Vladimir Kamenev
+What is SolarCare? 
 
 ## What is SolarCare?
 
@@ -45,8 +45,21 @@ SolarCare initially focuses only on **residential component replacement manageme
 
 Automated diagnosis, broader preventive-maintenance services, parts marketplaces and recycling services are possible future extensions, but are outside the initial scope.
 
-Architecture diagram - Boris Boček
+Architecture diagram - Boris B
 
-Stakeholders, market - Johannes Reiner 
+Stakeholders, market - Johannes R 
 
-Technologies used, APIs, Cloud - Vladimir Kamenev
+Technologies used, APIs, Cloud - Vlad K
+
+## Technologies  Initial Draft
+
+- **Device integration:** OpenDTU on ESP32, subject to equipment compatibility.
+- **Communication:** MQTT over TLS with a Mosquitto broker.
+- **Backend and APIs:** Python, FastAPI, and REST APIs.
+- **Database:** PostgreSQL for measurements, equipment, and maintenance records.
+- **Frontend:** React dashboard.
+- **Cloud:** AWS considered for hosting; specific services to be decided.
+- **Notifications:** Email provider API for alerts and reminders.
+- **Development:** GitHub, Docker, and GitHub Actions.
+
+All technology choices are preliminary.
