@@ -1,9 +1,9 @@
 # SolarCare
 
-What is SolarCare?
+What is SolarCare? - Vladimir Kamenev
 
-Architecture diagram
+Architecture diagram - Boris Boček
 
-Stakeholders, market
+Stakeholders, market - Johannes Reiner 
 
-Technologies used
+Technologies used, APIs, Cloud - Vladimir Kamenev
