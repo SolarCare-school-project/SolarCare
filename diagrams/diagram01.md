@@ -6,6 +6,8 @@ The sketch labels OpenDTU as the gateway. That is the gateway drawn here, not a 
 
 ## Diagram
 
+This is an early sketch, kept so the board is not forgotten. It is not the design to present.
+
 ```mermaid
 flowchart LR
   panel[Solar panel]

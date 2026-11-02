@@ -2,6 +2,8 @@
 
 The monitor team sees a reading that a part looks faulty. They create a job for a technician, then tell the household.
 
+This is a UML sequence for one corrective case. It does not show the website talking to the API.
+
 ```mermaid
 sequenceDiagram
   actor Monitor as Monitor team

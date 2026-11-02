@@ -54,6 +54,8 @@ Charge **per replacement job**, covering assessment, coordination and technician
 
 ### Workflow
 
+This is the first business path. A due date no longer means the part is replaced.
+
 ```mermaid
 flowchart LR
     A[Fault report<br/>or due-date trigger] --> B[Assessment &<br/>quote approval]
@@ -89,6 +91,8 @@ Software joins **equipment records**, **maintenance rules**, **inventory** and *
 ### OpenDTU connection
 
 Panels connect to compatible Hoymiles inverters; OpenDTU publishes inverter measurements through MQTT. Our subscriber receives relevant topics and links them to the equipment record. [[4]](#sources) [[5]](#sources)
+
+This shows one possible gateway, not a rule for every home.
 
 ```mermaid
 flowchart LR
@@ -130,6 +134,8 @@ Measurements used to support assessment and verification:
 ---
 
 ## 5. Architectural components
+
+This is an early component sketch. The current software picture will be the container diagram.
 
 ```mermaid
 flowchart TB

@@ -16,6 +16,8 @@ IEC 62446-2 (in Germany, DIN EN 62446-2) says to follow the manufacturer. It doe
 | Cables, connectors, mounting | No. Inspect them. Replace when the inspection says so. |
 | Microinverters and optimizers | No short agreed date. Warranties are often 20 to 25 years. Use the manual for that model if it names a date. |
 
+This is a UML sequence for the preventive case: a date opens a health check, not a replacement.
+
 ```mermaid
 sequenceDiagram
   actor Monitor as Monitor team
