@@ -1,7 +1,5 @@
 # SolarCare
 
-What is SolarCare? 
-
 ## What is SolarCare?
 
 **SolarCare is a residential solar maintenance service focused on managing the replacement of solar-system components.**
@@ -22,18 +20,19 @@ SolarCare manages the replacement process for components such as:
 - Cables and connectors
 - Relevant electrical protection components
 
-A replacement can be triggered in two ways:
+A job can start in three ways:
 
-- **Corrective replacement** — a component has failed or a fault has been identified.
-- **Preventive replacement** — a component reaches a defined maintenance or replacement point based on manufacturer guidance or an agreed maintenance policy.
+- **Corrective replacement:** a component has failed or a fault has been identified.
+- **Scheduled health check:** that part's check interval is due. A proposal, still to confirm: insurers often expect a yearly look and a fuller electrical check about every 4 years. A private home is not required by law to follow that. Use a shorter interval when the manual asks for one.
+- **Planned replacement:** only when that model's manual gives a real limit, such as a battery cycle count, a capacity floor, or a part the manual says to swap, such as an inverter filter.
 
 ### Replacement triggers
 
 | Trigger | Business rule |
 | --- | --- |
-| **Corrective replacement** — component failure or degradation | A fault, inspection result or technician assessment confirms that a component should be replaced. |
-| **Planned replacement** — lifecycle or manufacturer-defined threshold | A replacement task is created when a component reaches a manufacturer-defined lifecycle, capacity, usage or service threshold. This applies only to components for which such a threshold exists. |
-| **Preventive inspection** — scheduled condition check | Components without a fixed replacement interval, such as panels, cables and connectors, are inspected periodically and replaced only when their condition, safety or performance requires it. |
+| **Corrective replacement:** component failure or degradation | A fault, inspection result or technician assessment confirms that a component should be replaced. |
+| **Scheduled health check:** the part's interval is due | A check is opened. The part is replaced only when the check shows that its condition, safety or performance requires it. |
+| **Planned replacement:** a limit stated in the manual | A replacement task is created for that limit. This is for a battery that has reached its cycle count or capacity floor, or for a service part such as an inverter filter. Panels, cables, connectors, microinverters, optimizers, meters and most protection parts do not get a replace-by date. A string inverter is checked on a schedule. It gets a replace-by date only when that model's manual or warranty states one. |
 
 SolarCare coordinates the information required for the replacement process, including the installed equipment, component history, compatible replacement parts, technician work and replacement records.
 
@@ -41,9 +40,11 @@ SolarCare coordinates the information required for the replacement process, incl
 
 ### Initial scope
 
-SolarCare initially focuses only on **residential component replacement management**.
+SolarCare initially focuses on **residential component replacement**, including the scheduled health check that can lead to a replacement.
 
-Automated diagnosis, broader preventive-maintenance services, parts marketplaces and recycling services are possible future extensions, but are outside the initial scope.
+Automated diagnosis, cleaning contracts, parts marketplaces and recycling services are possible future extensions, but are outside the initial scope.
+
+The current software picture is the C4 set in [diagrams/c4](diagrams/c4): context, containers, and the components inside the API.
 
 Architecture diagram - Boris B
 
@@ -57,7 +58,7 @@ Technologies used, APIs, Cloud - Vlad K
 - **Communication:** MQTT over TLS with a Mosquitto broker.
 - **Backend and APIs:** Python, FastAPI, and REST APIs.
 - **Database:** PostgreSQL for measurements, equipment, and maintenance records.
-- **Frontend:** React dashboard.
+- **Frontend:** React website with a household screen and a team screen.
 - **Cloud:** AWS considered for hosting; specific services to be decided.
 - **Notifications:** Email provider API for alerts and reminders.
 - **Development:** GitHub, Docker, and GitHub Actions.
