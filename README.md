@@ -2,13 +2,11 @@
 
 ## What is SolarCare?
 
-**SolarCare is a residential solar maintenance service focused on managing the replacement of solar-system components.**
+**SolarCare is a solar maintenance service for private house owners, focused on managing the replacement of solar-system components.**
 
-The service is designed for residential solar installations in Germany. Our target customers are:
+The service is designed for private houses in Germany. Our target customer is:
 
-- **Homeowners** with private rooftop solar systems.
-- **Apartment owners** with individual permitted solar installations.
-- **Apartment-building owners or homeowners' associations (WEG)**, typically represented by a property manager.
+- **House owners** with their own rooftop solar system.
 
 SolarCare manages the replacement process for components such as:
 
@@ -40,7 +38,7 @@ SolarCare coordinates the information required for the replacement process, incl
 
 ### Initial scope
 
-SolarCare initially focuses on **residential component replacement**, including the scheduled health check that can lead to a replacement.
+SolarCare initially focuses on **component replacement for private houses**, including the scheduled health check that can lead to a replacement.
 
 Automated diagnosis, cleaning contracts, parts marketplaces and recycling services are possible future extensions, but are outside the initial scope.
 
@@ -58,7 +56,7 @@ Technologies used, APIs, Cloud - Vlad K
 - **Communication:** MQTT over TLS with a Mosquitto broker.
 - **Backend and APIs:** Python, FastAPI, and REST APIs.
 - **Database:** PostgreSQL for measurements, equipment, and maintenance records.
-- **Frontend:** React website with a household screen and a team screen.
+- **Frontend:** React website with a house owner screen and a team screen.
 - **Cloud:** AWS considered for hosting; specific services to be decided.
 - **Notifications:** Email provider API for alerts and reminders.
 - **Development:** GitHub, Docker, and GitHub Actions.

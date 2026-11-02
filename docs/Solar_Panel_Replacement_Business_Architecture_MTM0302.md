@@ -21,14 +21,14 @@ Business concept & software architecture · MTM 03.1 · 6 October 2026
 
 ## 1. One focused service
 
-We are an operations and maintenance team in a solar company for households. Our first service is **managing the replacement of solar-system components**, including:
+We are an operations and maintenance team in a solar company for private house owners. Our first service is **managing the replacement of solar-system components**, including:
 
 - Panels
 - Inverters
 - Cables
 - Connectors
 
-**Proposed initial customers:** owners and property managers of small rooftop installations in Berlin and the surrounding area.
+**Proposed initial customers:** private house owners of small rooftop installations in Berlin and the surrounding area.
 
 > 💡 **Customer value:** coordinate the right replacement part, technician and equipment history in one process, reducing avoidable downtime and missed maintenance dates.
 

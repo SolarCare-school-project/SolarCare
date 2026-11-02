@@ -1,6 +1,6 @@
 # Faulty part: the monitor team starts the job
 
-The monitor team sees a reading that a part looks faulty. They create a job for a technician, then tell the household.
+The monitor team sees a reading that a part looks faulty. They create a job for a technician, then tell the house owner.
 
 This is a UML sequence for one corrective case. It does not show the website talking to the API.
 
@@ -9,7 +9,7 @@ sequenceDiagram
   actor Monitor as Monitor team
   participant Site as SolarCare
   actor Tech as Technician
-  actor Home as Household
+  actor Home as House owner
   actor Lead as Team lead
 
   Monitor->>Site: Open this unit's readings
@@ -39,4 +39,4 @@ Still to check with the team: if the part is one that commonly breaks, can the t
 
 Proposed team policy, still to be agreed: the visit is free when the fault is under warranty, and a visit fee applies after two visits in a row with no fault.
 
-In this drawing the team lead is asked before the household is asked to pay.
+In this drawing the team lead is asked before the house owner is asked to pay.
