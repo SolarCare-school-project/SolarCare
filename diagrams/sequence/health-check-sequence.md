@@ -6,15 +6,15 @@ The years and warranty lengths below are proposals to check. They are not rules 
 
 IEC 62446-2 (in Germany, DIN EN 62446-2) says to follow the manufacturer. It does not set a replacement year. For a private home in Germany there is also no general law that says parts must be swapped on a calendar. Insurers often ask for a yearly look and an electrical check about every 4 years (DIN EN 62446-1). Those are inspections. They are not the same as replacing a part because a date arrived.
 
-| Part | Agreed replacement date? |
+| Part | Health check on a date? |
 | --- | --- |
-| String inverter | Yes, when that model has a service life or warranty end. Often talked about as 10 to 15 years. Warranties are often 5 to 10 years. Store the date for that unit, not one date for all inverters. |
-| Battery | Yes, when the maker gives a year, a cycle count, or a capacity limit. A 10-year warranty is common. Whichever limit is reached first. |
-| Inverter filter, and other parts the manual tells you to swap on a schedule | Yes. Use the manual. |
-| Surge protector | Only if that device's manual gives a maximum time. Otherwise replace when its indicator says end of life, or after a strike. |
-| Panels | No. A performance warranty of about 25 to 30 years is a promise about output, not an order to replace the panel on that birthday. Replace when it is damaged or below the promised output. |
-| Cables, connectors, mounting | No. Inspect them. Replace when the inspection says so. |
-| Microinverters and optimizers | No short agreed date. Warranties are often 20 to 25 years. Use the manual for that model if it names a date. |
+| String inverter | Yes, when that model has a service life or warranty end. Often talked about as 10 to 15 years. Warranties are often 5 to 10 years. Store the check date for that unit. The visit decides whether to replace it. |
+| Battery | Yes, when the maker gives a year, a cycle count, or a capacity limit. A 10-year warranty is common. Whichever limit is reached first opens a health check. The visit decides whether to replace it. |
+| Inverter filter, and other parts the manual mentions on a schedule | Yes. The manual's date opens a health check. The visit decides whether to swap the part. |
+| Surge protector | Only if that device's manual gives a maximum time. Otherwise check when its indicator says end of life, or after a strike. |
+| Panels | No. A performance warranty of about 25 to 30 years is a promise about output, not a check date. Replace when a health check or a technician visit finds it damaged or below the promised output. |
+| Cables, connectors, mounting | No. Inspect them during a health check or a technician visit. Replace when that visit says so. |
+| Microinverters and optimizers | No short check date. Warranties are often 20 to 25 years. Use the manual for that model if it names a date. |
 
 This is a UML sequence for the preventive case: a date opens a health check, not a replacement.
 

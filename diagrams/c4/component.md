@@ -14,7 +14,7 @@ ContainerDb(db, "Database", "PostgreSQL, candidate", "Homes, parts, readings, an
 
 Container_Boundary(api, "API") {
     Component(access, "Access check", "Allows a user to see only the homes and jobs they are permitted")
-    Component(jobs, "Jobs", "Opens a fault report, a health check, or a planned replacement")
+    Component(jobs, "Jobs", "Opens a support ticket or a health check")
     Component(parts, "Part record", "Updates the installed part when a replacement is recorded")
     Component(inbox, "Reading inbox", "Stores readings with the time they were measured")
 }
@@ -29,4 +29,4 @@ Rel(parts, db, "Updates the installed part")
 Rel(access, db, "Reads who may see a home")
 ```
 
-A health check or a fault report becomes a job. The part record changes only when that job says a part was replaced. The reading inbox does not decide that a part has failed.
+A support ticket or a health check becomes a job. The part record changes only when that job says a part was replaced. The reading inbox does not decide that a part has failed.
