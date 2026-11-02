@@ -8,7 +8,7 @@ Arrows show who starts the communication.
 C4Component
 title Components inside the SolarCare API
 
-Container(web, "Website", "React, candidate", "Household screen and team screen")
+Container(web, "Website", "React, candidate", "House owner screen and team screen")
 Container(broker, "MQTT broker", "Mosquitto, candidate", "Routes readings from the home")
 ContainerDb(db, "Database", "PostgreSQL, candidate", "Homes, parts, readings, and jobs")
 

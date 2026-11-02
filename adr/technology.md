@@ -84,7 +84,7 @@ Specific services will be selected based on cost, reliability, and maintenance e
 
 ## Availability
 
-Households, apartments, and a building manager use the ordinary internet connection of the home. That line is outside this target. The panels keep producing power while our website or the home connection is down.
+A private house uses the ordinary internet connection of that house. That line is outside this target. The panels keep producing power while our website or the house connection is down.
 
 - **Website and API:** an internal target of 99% in a month, about 7 hours. This is not a promise in a customer contract. It fits one cloud setup and no night-time on-call team.
 - **Readings from a home:** no uptime percentage. Show the last value and the time it was measured. A reading sent later can arrive now and still be old. After a few hours with nothing new, mark the data out of date.
