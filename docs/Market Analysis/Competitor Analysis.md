@@ -57,15 +57,15 @@ quadrantChart
 
 ### 3. Utility-Scale & C&I O&M Providers (indirect, relevant for expansion)
 
-| Company | HQ | Focus | Relevance for SolarCare |
+| Company | HQ | Focus | 
 |---|---|---|---|
-| **ENcome Energy Performance** | Klagenfurt, AT | Independent O&M for PV plants in Europe and Australia; 24/7 monitoring center; ~90 employees | Competitor in phase 3 (large systems) |
-| **BELECTRIC** | Kolitzheim, DE | Utility-scale O&M, thermography, voltage inspections, 24/7 monitoring | Competitor in phase 3 |
-| **GOLDBECK SOLAR** | Hirschberg, DE | Commercial and utility O&M, repowering | Competitor in phase 3 |
-| **JUWI** | Wörrstadt, DE | Development and O&M of large solar and hybrid plants | Competitor in phase 3 |
-| **ABO Energy** | Wiesbaden, DE | Operations management for >2,200 MW renewable assets | Competitor in phase 3 |
+| **ENcome Energy Performance** | Klagenfurt, AT | Independent O&M for PV plants in Europe and Australia; 24/7 monitoring center; ~90 employees |
+| **BELECTRIC** | Kolitzheim, DE | Utility-scale O&M, thermography, voltage inspections, 24/7 monitoring | 
+| **GOLDBECK SOLAR** | Hirschberg, DE | Commercial and utility O&M, repowering | 
+| **JUWI** | Wörrstadt, DE | Development and O&M of large solar and hybrid plants | 
+| **ABO Energy** | Wiesbaden, DE | Operations management for >2,200 MW renewable assets | 
 | **TSG Solar** | DACH | C&I maintenance, compliance audits | Competitor in phase 3 |
-| **SPR Energie** | North Germany | Regional installer, >500 MWp under maintenance | Competitor in phases 2–3 |
+| **SPR Energie** | North Germany | Regional installer, >500 MWp under maintenance | 
 | **NovaSource Power Services** | Global | World's largest O&M provider (38.4 GW) | No residential business |
 | **meteocontrol, Solargis** | DE / global | AI monitoring for large plants | Too complex and expensive for homes |
 
