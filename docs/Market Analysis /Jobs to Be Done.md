@@ -1,4 +1,4 @@
-## Jobs to be Done
+## Jobs to Be Done
 
 **Main job:**
 > "When my solar system is running, I want to be sure it delivers full yield and that nothing breaks unexpectedly, so that my investment pays off."
