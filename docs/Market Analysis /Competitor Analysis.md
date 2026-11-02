@@ -38,9 +38,9 @@ quadrantChart
 
 | Company | Offering | Price | Weakness vs. SolarCare |
 |---|---|---|---|
-| **SMA – Smart Connected** | Automatic 24/7 inverter monitoring; informs owner and installer; ships a replacement inverter within 1–3 days | Free [service for monitoring & diagnosis, not the replacement] | SMA inverters only; covers the inverter, not the whole system |
-| **Fronius – Solar.web** | Monitoring app, alerts, Service Partner program for installer repairs, 10-year warranty after registration | Free; Premium approx. €24/year | Fronius inverters only; repair depends on the installer |
-| **SolarEdge, Huawei, Enphase** | Free monitoring apps with error codes | Free | Own hardware only; error codes without instructions; no repair coordination |
+| **SMA – Smart Connected** | Automatic 24/7 inverter monitoring; informs owner and installer; ships a replacement inverter within 1–3 days | Free [service for monitoring & diagnosis, not the replacement] | 
+| **Fronius – Solar.web** | Monitoring app, alerts, Service Partner program for installer repairs, 10-year warranty after registration | Free; Premium approx. €24/year | 
+| **SolarEdge, Huawei, Enphase** | Free monitoring apps with error codes | Free | 
 
 ### 2. Residential Service Providers (direct competitors)
 
