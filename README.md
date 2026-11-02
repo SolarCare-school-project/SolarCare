@@ -84,7 +84,7 @@ SolarCare monitors PV systems of private homeowners, predicts which component ne
 
 | Topic | Summary |
 |---|---|
-| [Target Group](Target%20Group.md) | Private homeowners in the DACH region with a 5–15 kWp rooftop system, 3–12 years old, connected via Wi-Fi |
+| [Target Group](Target%20Group.md) | Private homeowners in the DACH region with a 5–15 kWp rooftop system, 3–12 years old |
 | [Jobs to Be Done](Jobs%20to%20Be%20Done.md) | Customers want full yield and no unexpected failures, without needing technical knowledge |
 | [Expansion Path & Scalability](Expansion%20Path%20%26%20Scalability.md) | Start with private homeowners, then multi-family buildings and farms, then businesses and institutions |
 | [Competitor Analysis](Competitor%20Analysis.md) | Manufacturers and installers service only their own systems; independent tools offer data but no repair. SolarCare combines independent fault prediction with repair coordination |
