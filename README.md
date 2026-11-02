@@ -44,7 +44,7 @@ SolarCare initially focuses on **residential component replacement**, including 
 
 Automated diagnosis, cleaning contracts, parts marketplaces and recycling services are possible future extensions, but are outside the initial scope.
 
-The current software picture is [diagrams/container/container.md](diagrams/container/container.md).
+The current software picture is the C4 set in [diagrams/c4](diagrams/c4): context, containers, and the components inside the API.
 
 Architecture diagram - Boris B
 

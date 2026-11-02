@@ -135,7 +135,7 @@ Measurements used to support assessment and verification:
 
 ## 5. Architectural components
 
-This is an early component sketch. The current software picture is diagrams/container/container.md.
+This is an early component sketch. The current software picture is the C4 set in diagrams/c4.
 
 ```mermaid
 flowchart TB

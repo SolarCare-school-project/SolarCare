@@ -1,12 +1,12 @@
 # SolarCare container diagram
 
-This is the current software picture. It shows the main applications, the database, and the interfaces. Arrows show who starts the communication.
+C4 level 2. This opens the SolarCare box into the website, the API, the database, and the MQTT broker. A container here means a program or a data store that runs on its own. It does not mean a Docker container.
 
-Technology names are candidates, not final choices.
+Arrows show who starts the communication. Technology names are candidates, not final choices.
 
 ```mermaid
 C4Container
-title SolarCare
+title SolarCare containers
 
 Person(household, "Household", "Sees only their own home")
 Person(team, "Monitor team, technician, team lead", "Uses the team screen")
@@ -17,20 +17,20 @@ Container_Boundary(home, "Home") {
 
 Container_Boundary(solarcare, "SolarCare") {
     Container(web, "Website", "React is a candidate", "Household screen and team screen")
-    Container(api, "API", "FastAPI is a candidate", "Jobs, health checks, part record, and the MQTT subscriber")
+    Container(api, "API", "FastAPI is a candidate", "Jobs, health checks, the part record, and the reading inbox")
     ContainerDb(db, "Database", "PostgreSQL is a candidate", "Homes, parts, readings, and jobs")
     Container(broker, "MQTT broker", "Mosquitto is a candidate", "Routes readings from the home")
 }
 
 Rel(gateway, broker, "Publishes readings", "MQTT")
-Rel(broker, api, "Delivers readings", "MQTT")
+Rel(api, broker, "Subscribes", "MQTT")
 Rel(household, web, "Opens the household screen", "HTTPS")
 Rel(team, web, "Opens the team screen", "HTTPS")
 Rel(web, api, "Calls", "HTTPS")
 Rel(api, db, "Reads and writes", "SQL")
 ```
 
-The gateway stays in the home. The household screen does not connect to the broker. There is no line from the gateway straight to the database.
+The gateway stays in the home. The household screen does not connect to the broker. There is no line from the gateway straight to the database. The API subscribes to the broker, so the broker is not the side that opens that connection.
 
 ## Who can see what
 
