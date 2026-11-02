@@ -58,7 +58,7 @@ quadrantChart
 ### 3. Utility-Scale & C&I O&M Providers (indirect, relevant for expansion)
 
 | Company | HQ | Focus | 
-|---|---|---|---|
+|---|---|---|
 | **ENcome Energy Performance** | Klagenfurt, AT | Independent O&M for PV plants in Europe and Australia; 24/7 monitoring center; ~90 employees |
 | **BELECTRIC** | Kolitzheim, DE | Utility-scale O&M, thermography, voltage inspections, 24/7 monitoring | 
 | **GOLDBECK SOLAR** | Hirschberg, DE | Commercial and utility O&M, repowering | 
