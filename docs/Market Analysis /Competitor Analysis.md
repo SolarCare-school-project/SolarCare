@@ -44,16 +44,16 @@ quadrantChart
 
 ### 2. Residential Service Providers (direct competitors)
 
-| Company | Type | Offering | Price | Weakness vs. SolarCare |
-|---|---|---|---|---|
-| **Enpal** | Installer with service subscription | Remote maintenance, monitoring, repairs | €5/month (2 years), then €20/month | Own customers only |
+| Company | Type | Offering | Price | 
+|---|---|---|---|
+| **Enpal** | Installer with service subscription | Remote maintenance, monitoring, repairs | €5/month (2 years), then €20/month | 
 | **1KOMMA5° – Heartbeat AI** | Energy manager + own technicians | Energy optimisation, dynamic tariffs; retrofit for third-party systems since Nov 2025 | Gateway + tariff | Focus on energy trading, not fault prediction |
 | **Solar Manager AG** (CH) | Home energy management system | Manufacturer-independent monitoring, fault analysis and remote access for installers; >20,000 customers, market leader in Swiss residential | Hardware + annual licence | Focus on self-consumption; sold via installers; no repair coordination |
 | **Solytic** (Berlin) | Independent AI monitoring | Manufacturer-independent monitoring, service marketplace | Via partners (B2B2C) | Sold mainly through installers/utilities; weak consumer brand |
 | **Solar-Log** | Data logger + portal | Cross-manufacturer monitoring | Hardware purchase | Data only, no repair service |
-| **pv-sos GmbH** | Independent PV service company | Maintenance and repairs for private owners | On request | Manual, on-site; no continuous data analysis |
+| **pv-sos GmbH** | Independent PV service company | Maintenance and repairs for private owners | On request |
 | **Viessmann** | Heating/energy brand | PV maintenance via partner network | On request | Periodic checks, not predictive |
-| **Local installers** | Maintenance contract | On-site check every 1–4 years | €150–300/year | Reactive, no live data, limited capacity |
+| **Local installers** | Maintenance contract | On-site check every 1–4 years | €150–300/year | 
 
 ### 3. Utility-Scale & C&I O&M Providers (indirect, relevant for expansion)
 
