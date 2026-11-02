@@ -44,7 +44,18 @@ SolarCare initially focuses on **residential component replacement**, including 
 
 Automated diagnosis, cleaning contracts, parts marketplaces and recycling services are possible future extensions, but are outside the initial scope.
 
-The current software picture is the C4 set in [diagrams/c4](diagrams/c4): context, containers, and the components inside the API.
+The current software picture is the C4 set:
+
+- [Context](diagrams/c4/context.md)
+- [Containers](diagrams/c4/container.md)
+- [API components](diagrams/c4/component.md)
+
+An incident at a private house is three sequences. A scheduled health check is separate:
+
+- [Incident: FAQ and the customer's software](diagrams/sequence/incident-faq-sequence.md)
+- [Incident: software engineer](diagrams/sequence/incident-software-sequence.md)
+- [Incident: hardware already clear](diagrams/sequence/incident-hardware-sequence.md)
+- [Scheduled health check](diagrams/sequence/health-check-sequence.md)
 
 Architecture diagram - Boris B
 
