@@ -1,6 +1,6 @@
 ## Target Group
 
-**Primary target group:** Private homeowners with a rooftop PV system connected to the internet via Wi-Fi.
+**Primary target group:** Private homeowners with a rooftop PV system.
 
 | Criterion | Definition |
 |---|---|
