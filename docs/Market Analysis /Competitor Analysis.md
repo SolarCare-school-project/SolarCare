@@ -21,7 +21,7 @@ quadrantChart
     Heartbeat AI: [0.42, 0.68]
     SMA Smart Connected: [0.10, 0.62]
     Fronius: [0.20, 0.40]
-    SolarEdge and Huawei apps: [0.08, 0.15]
+        SolarEdge and Huawei apps: [0.08, 0.15]
     Local installers: [0.38, 0.72]
     Viessmann: [0.58, 0.64]
     pv-sos: [0.66, 0.74]
