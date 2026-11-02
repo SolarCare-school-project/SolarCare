@@ -34,8 +34,6 @@ quadrantChart
     Solar-Log: [0.82, 0.14]
 ```
 
-Competitors in the top-right quadrant (pv-sos, Viessmann) repair any system, but **reactively and on-site**, without continuous data. SolarCare is the only one combining **manufacturer-independent, data-driven fault prediction** with **coordinated repair**.
-
 ### 1. Manufacturer Service Programs (direct, own hardware only)
 
 | Company | Offering | Price | Weakness vs. SolarCare |
