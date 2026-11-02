@@ -28,7 +28,7 @@ Compatibility with the selected solar equipment needs verification.
 ## Backend
 
 - **Python with FastAPI:** Provide application APIs and process incoming data.
-- **Maintenance rules:** Identify missing readings or unusual production patterns for investigation.
+- **Maintenance rules:** Flag unusual production patterns for investigation. A missing reading is marked out of date, as described under Availability.
 - **Notification service:** Send fault notifications and maintenance reminders.
 
 ## Database
@@ -80,7 +80,18 @@ Specific services will be selected based on cost, reliability, and maintenance e
 - Separate device credentials and restricted MQTT topic access.
 - Database backups and secure storage of credentials.
 - Logging and monitoring to detect failures.
-- Handling of home internet outages and missing measurements.
+- A home that goes offline is handled as described under Availability.
+
+## Availability
+
+Households, apartments, and a building manager use the ordinary internet connection of the home. That line is outside this target. The panels keep producing power while our website or the home connection is down.
+
+- **Website and API:** an internal target of 99% in a month, about 7 hours. This is not a promise in a customer contract. It fits one cloud setup and no night-time on-call team.
+- **Readings from a home:** no uptime percentage. Show the last value and the time it was measured. A reading sent later can arrive now and still be old. After a few hours with nothing new, mark the data out of date.
+- **A gap in readings:** does not by itself mean a part has failed. A health check or a fault report still decides that.
+- **Jobs and visits:** business days, not a minutes-long emergency response.
+
+The useful check is how long it has been since each home last sent a reading.
 
 ## Development Tools
 
@@ -93,7 +104,7 @@ Specific services will be selected based on cost, reliability, and maintenance e
 - Which solar equipment will we support?
 - Which measurements are available, and how frequently should we collect them?
 - How will installation data securely reach our cloud services?
-- How should the system behave when an installation goes offline?
+- How long with no new reading before we mark the data out of date?
 - Which maintenance rules can the available data support?
 - How long should measurements be retained?
 - Which cloud provider and services best fit our budget?

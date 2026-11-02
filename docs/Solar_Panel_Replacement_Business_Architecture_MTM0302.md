@@ -21,7 +21,7 @@ Business concept & software architecture · MTM 03.1 · 6 October 2026
 
 ## 1. One focused service
 
-We are an operations and maintenance team in a solar company. Our first service is **managing the replacement of solar-system components**, including:
+We are an operations and maintenance team in a solar company for households. Our first service is **managing the replacement of solar-system components**, including:
 
 - Panels
 - Inverters
@@ -53,6 +53,8 @@ Charge **per replacement job**, covering assessment, coordination and technician
 > ⚠️ Prices and margins remain to be validated.
 
 ### Workflow
+
+This is the first business path. A due date no longer means the part is replaced.
 
 ```mermaid
 flowchart LR
@@ -89,6 +91,8 @@ Software joins **equipment records**, **maintenance rules**, **inventory** and *
 ### OpenDTU connection
 
 Panels connect to compatible Hoymiles inverters; OpenDTU publishes inverter measurements through MQTT. Our subscriber receives relevant topics and links them to the equipment record. [[4]](#sources) [[5]](#sources)
+
+This shows one possible gateway, not a rule for every home.
 
 ```mermaid
 flowchart LR
@@ -130,6 +134,8 @@ Measurements used to support assessment and verification:
 ---
 
 ## 5. Architectural components
+
+This is an early component sketch. The current software picture is the C4 set in diagrams/c4.
 
 ```mermaid
 flowchart TB
