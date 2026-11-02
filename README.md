@@ -80,7 +80,7 @@ Stakeholders & Market
 
 # SolarCare – Market Analysis
 
-SolarCare monitors Wi-Fi-connected PV systems of private homeowners, predicts which component needs maintenance or replacement, and connects owners with a technician before failures cost them money.
+SolarCare monitors PV systems of private homeowners, predicts which component needs maintenance or replacement, and connects owners with a technician before failures cost them money.
 
 | Topic | Summary |
 |---|---|
