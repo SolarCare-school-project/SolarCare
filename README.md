@@ -78,6 +78,7 @@ Stakeholders & Market
 | **Founders / management** | Strategy, finance, partnerships with replacement companies & data protection. | High | High | Manage closely | All data in aggregated form; raw data only if needed. |
 | **Software engineers** | Build the platform, connect inverter APIs, forecasting & designing models. | High | Medium | Manage closely | Anonymised or test data; live data only for incidents, logged. |
 | **Support engineer** | Handles tickets, coordinates installers.<br><br>**Support levels:**<br>• **L0 – Self-service:** FAQ and help center.<br>• **L1 – Basic support:** General questions and account issues.<br>• **L2 – Technical support (software engineer):** Technical issues connected to our software.<br>• **L3 – Physical support:** Assign to a third-party replacement company. | High | Medium | Keep informed | Only customers with an open ticket |
+| **Marketing / GTM & sales** | Customer acquisition/growth, installer partnerships. | Medium | Low | Keep informed | Opt-in contact data + anonymised aggregated analytics; no system data. |
 
 Technologies used, APIs, Cloud - Vlad K
 
