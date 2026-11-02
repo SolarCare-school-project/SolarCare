@@ -21,7 +21,7 @@ Business concept & software architecture · MTM 03.1 · 6 October 2026
 
 ## 1. One focused service
 
-We are an operations and maintenance team in a solar company. Our first service is **managing the replacement of solar-system components**, including:
+We are an operations and maintenance team in a solar company for households. Our first service is **managing the replacement of solar-system components**, including:
 
 - Panels
 - Inverters
