@@ -1,6 +1,9 @@
 ## Competitor Analysis
 
-SolarCare competes with three groups: **manufacturers** that service their own inverters, **residential service providers** that offer maintenance or monitoring to homeowners, and **utility-scale O&M companies** that become relevant once SolarCare expands to larger systems.
+SolarCare competes with three groups: 
+**1. manufacturers** that service their own inverters, 
+**2. residential service providers** that offer maintenance or monitoring to homeowners, and 
+**3. utility-scale O&M companies** that become relevant once SolarCare expands to larger systems.
 
 ### Competitive Positioning (Residential, DACH)
 
