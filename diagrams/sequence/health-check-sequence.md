@@ -1,6 +1,6 @@
 # Agreed date: the monitor team starts the health check
 
-This job exists only for a part that has its own agreed date on the record. The date comes from that model's maker guidance or from the policy agreed with the household. There is no one number of years for every solar part.
+This job exists only for a part that has its own agreed date on the record. The date comes from that model's maker guidance or from the policy agreed with the house owner. There is no one number of years for every solar part.
 
 The years and warranty lengths below are proposals to check. They are not rules we have confirmed.
 
@@ -22,7 +22,7 @@ This is a UML sequence for the preventive case: a date opens a health check, not
 sequenceDiagram
   actor Monitor as Monitor team
   participant Site as SolarCare
-  actor Home as Household
+  actor Home as House owner
   actor Tech as Technician
 
   Site-->>Monitor: This part has reached its agreed date
