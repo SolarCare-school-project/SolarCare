@@ -16,7 +16,7 @@ flowchart LR
   db[(Database: stored readings)]
   api[Backend API and access guidance]
   web[Website: dashboard, jobs, tools]
-  cleaners[Cleaners]
+  tech[Technician]
 
   panel --> inverter --> dtu
   dtu --> broker
@@ -25,10 +25,10 @@ flowchart LR
   broker --> web
   db <--> api
   web <-->|"HTTPS API"| api
-  cleaners --> web
+  tech --> web
 ```
 
-The owner arrow is drawn to the MQTT broker and is not labeled on the sketch. Cleaners are drawn to the website. The website and the database both connect to the backend. The link between the website and the backend is marked HTTPS API.
+The owner arrow is drawn to the MQTT broker and is not labeled on the sketch. The technician is drawn to the website. The website and the database both connect to the backend. The link between the website and the backend is marked HTTPS API.
 
 ## Who can see what
 
@@ -49,9 +49,9 @@ The backend is the place these limits are applied. The sketch calls that part of
 
 ## When the internet connection is lost
 
-The panels keep producing power if the website is offline. The gateway stores readings locally, limited by time and by how much it has stored. When the connection returns, it sends the stored readings in FIFO order: oldest first.
+The panels keep producing power if the website is offline. A proposal, not a confirmed OpenDTU feature: the gateway stores readings locally, limited by time and by how much it has stored. When the connection returns, it sends the stored readings oldest first.
 
-The website shows the latest reading it has, and the time that reading arrived. If readings stop, the page says the data is out of date. A check tells the user whether the system is responding.
+The website shows the latest reading it has, and the time the reading was measured. A reading sent later can arrive now and still be old. If readings stop, the page says the data is out of date. A check tells the user whether the system is responding.
 
 Still open on the sketch:
 

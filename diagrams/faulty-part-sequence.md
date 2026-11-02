@@ -35,4 +35,6 @@ sequenceDiagram
 
 Still to check with the team: if the part is one that commonly breaks, can the technician start the replacement with no team lead?
 
+Proposed team policy, still to be agreed: the visit is free when the fault is under warranty, and a visit fee applies after two visits in a row with no fault.
+
 In this drawing the team lead is asked before the household is asked to pay.
