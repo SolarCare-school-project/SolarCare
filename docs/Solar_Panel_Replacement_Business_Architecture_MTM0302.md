@@ -54,11 +54,11 @@ Charge **per replacement job**, covering assessment, coordination and technician
 
 ### Workflow
 
-This is the first business path. A due date no longer means the part is replaced.
+This is the first business path. A support ticket or a health check can lead to a visit. The part is replaced only when that visit finds it should be replaced. A date in the manual does not open a replacement on its own.
 
 ```mermaid
 flowchart LR
-    A[Fault report<br/>or due-date trigger] --> B[Assessment &<br/>quote approval]
+    A[Support ticket<br/>or health check] --> B[Assessment &<br/>quote approval]
     B --> C[Compatible-part<br/>reservation]
     C --> D[Technician<br/>scheduling]
     D --> E[Replacement &<br/>verification]

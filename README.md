@@ -18,19 +18,17 @@ SolarCare manages the replacement process for components such as:
 - Cables and connectors
 - Relevant electrical protection components
 
-A job can start in three ways:
+A job can start in two ways:
 
-- **Corrective replacement:** a component has failed or a fault has been identified.
-- **Scheduled health check:** that part's check interval is due. A proposal, still to confirm: insurers often expect a yearly look and a fuller electrical check about every 4 years. A private home is not required by law to follow that. Use a shorter interval when the manual asks for one.
-- **Planned replacement:** only when that model's manual gives a real limit, such as a battery cycle count, a capacity floor, or a part the manual says to swap, such as an inverter filter.
+- **Support ticket:** the house owner reports an incident, or support already has a case. A hardware case can end in a technician visit. The part is replaced only when that visit finds it faulty.
+- **Scheduled health check:** that part's check interval is due. A proposal, still to confirm: insurers often expect a yearly look and a fuller electrical check about every 4 years. A private home is not required by law to follow that. Use a shorter interval when the manual asks for one. A limit in the manual, such as a battery cycle count, opens this check. It does not open a replacement on its own.
 
 ### Replacement triggers
 
 | Trigger | Business rule |
 | --- | --- |
-| **Corrective replacement:** component failure or degradation | A fault, inspection result or technician assessment confirms that a component should be replaced. |
+| **Support ticket:** an incident reaches a technician | The technician visits. The part is replaced only when the visit finds it faulty. |
 | **Scheduled health check:** the part's interval is due | A check is opened. The part is replaced only when the check shows that its condition, safety or performance requires it. |
-| **Planned replacement:** a limit stated in the manual | A replacement task is created for that limit. This is for a battery that has reached its cycle count or capacity floor, or for a service part such as an inverter filter. Panels, cables, connectors, microinverters, optimizers, meters and most protection parts do not get a replace-by date. A string inverter is checked on a schedule. It gets a replace-by date only when that model's manual or warranty states one. |
 
 SolarCare coordinates the information required for the replacement process, including the installed equipment, component history, compatible replacement parts, technician work and replacement records.
 
