@@ -37,4 +37,4 @@ sequenceDiagram
   end
 ```
 
-A replacement happens only when the check says so. Cost, warranty, and team-lead approval then follow the faulty-part story. Those rules are still proposals.
+A replacement happens only when the check says so. An incident at the house follows the incident sequences. This scheduled check does not.
