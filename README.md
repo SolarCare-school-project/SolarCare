@@ -46,7 +46,27 @@ The current software picture is the C4 set in [diagrams/c4](diagrams/c4): contex
 
 Architecture diagram - Boris B
 
-Stakeholders, market - Johannes R 
+Stakeholders & Market
+## Stakeholder Analysis
+
+### External Stakeholders
+
+| Stakeholder | How they are affected / affect us | Interest | Power | Attention | Data access |
+|---|---|---|---|---|---|
+| **Private customers** | Use and pay for the software; protect & monitor their PVs. Creating a ticket for replacement & connecting them to the right replacement company. | High | High | Manage closely | Own data only; can export, delete and share (GDPR-compliant). |
+| **Inverter manufacturers** | Our data source via their API; can block access; can compete with their own apps. | Medium | High | Manage closely | Receive no data |
+| **Third-party replacement company** | Carry out repairs. We connect them with our platform through third-party partnerships. | High | Medium | Manage closely | System data + customer data, per ticket only. |
+| **Government / regulator / BfDI & Federal Network Agency** | Sets rules (subsidies, grid, data law). We might provide them aggregated data for governmental reporting. | Low | High | Keep satisfied | Aggregated data only. |
+| **Cloud / software providers** | Host and process our data – using their service only. | Medium | Medium | Keep informed | Technical processing under a data processing agreement. |
+| **Competitors** | Influence pricing and positioning in the market. | Medium | Medium | Monitor | None |
+
+### Internal Stakeholders
+
+| Role | Responsibility | Interest | Power | Attention | Data access |
+|---|---|---|---|---|---|
+| **Founders / management** | Strategy, finance, partnerships with replacement companies & data protection. | High | High | Manage closely | All data in aggregated form; raw data only if needed. |
+| **Software engineers** | Build the platform, connect inverter APIs, forecasting & designing models. | High | Medium | Manage closely | Anonymised or test data; live data only for incidents, logged. |
+| **Support engineer** | Handles tickets, coordinates installers.<br><br>**Support levels:**<br>• **L0 – Self-service:** FAQ and help center.<br>• **L1 – Basic support:** General questions and account issues.<br>• **L2 – Technical support (software engineer):** Technical issues connected to our software.<br>• **L3 – Physical support:** Assign to a third-party replacement company. | High | Medium | Keep informed | Only customers with an open ticket |
 
 Technologies used, APIs, Cloud - Vlad K
 
