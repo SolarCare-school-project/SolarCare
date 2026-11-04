@@ -57,6 +57,19 @@ This shows step by step who does what, and in what order, in each process.
 - [Incident: hardware already clear](diagrams/sequence/incident-hardware-sequence.md)
 - [Scheduled health check](diagrams/sequence/health-check-sequence.md)
 
+## Architecture decisions
+
+The architecture decisions are in the `adr` folder. An ADR (architecture decision record) is a short file that records one design decision, why we made it, and what it changes. Each ADR follows Michael Nygard's format: Status, Context, Decision and Consequences, plus an Open questions section, as this is ongoing project. 
+
+- [Technology stack](adr/technology-stack.md): the tools SolarCare uses, where each one runs, and why it was chosen.
+- [Interfaces](adr/interfaces.md): each connection between the gateway, broker, API, website, app, what happens when one fails.
+- [Data collection](adr/data-collection.md): which readings and customer details are collected, and which are never collected.
+- [Data security](adr/data-security.md): who may see which data, who may act on it, and how access is protected.
+- [Availability](adr/availability.md): the internal 99.5% SLA target, which parts need redundancy, and what happens when readings stop.
+- [Logging](adr/logging.md): which events are logged, what must not be logged, and who can read the logs.
+- [Deployment](adr/deployment.md): how a change is reviewed, tested, released, and rolled back.
+- [Open questions](adr/SolarCare-open-questions.md): what the team has not decided yet.
+
 Architecture diagram - Boris B
 
 Stakeholders & Market
