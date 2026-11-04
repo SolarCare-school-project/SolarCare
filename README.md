@@ -2,13 +2,9 @@
 
 ## What is SolarCare?
 
-**SolarCare is a solar maintenance service for private house owners, focused on managing the replacement of solar-system components.**
+**SolarCare is support software for private house owners in Germany.** It monitors, collects readings, manages incidents and health checks for the solar system, and keeps the record of what is installed and its health.
 
-The service is designed for private houses in Germany. Our target customer is:
-
-- **House owners** with their own rooftop solar system.
-
-SolarCare manages the replacement process for components such as:
+The system monitoring can include:
 
 - Solar panels
 - Inverters or microinverters
@@ -18,35 +14,43 @@ SolarCare manages the replacement process for components such as:
 - Cables and connectors
 - Relevant electrical protection components
 
-A job can start in two ways:
+## Important notes
 
-- **Support ticket:** the house owner reports an incident, or support already has a case. A hardware case can end in a technician visit. The part is replaced only when that visit finds it faulty.
-- **Scheduled health check:** that part's check interval is due. A proposal, still to confirm: insurers often expect a yearly look and a fuller electrical check about every 4 years. A private home is not required by law to follow that. Use a shorter interval when the manual asks for one. A limit in the manual, such as a battery cycle count, opens this check. It does not open a replacement on its own.
+**Inspection interval:** German guidance recommends a full-system inspection every four years. SolarCare may set a shorter interval under its maintenance policy.
 
-### Replacement triggers
 
-| Trigger | Business rule |
-| --- | --- |
-| **Support ticket:** an incident reaches a technician | The technician visits. The part is replaced only when the visit finds it faulty. |
-| **Scheduled health check:** the part's interval is due | A check is opened. The part is replaced only when the check shows that its condition, safety or performance requires it. |
+## Who takes part in monitoring and maintenance
 
-SolarCare coordinates the information required for the replacement process, including the installed equipment, component history, compatible replacement parts, technician work and replacement records.
+- **Solar System owner:** sees their own system and can raise an incident case if they find an issue with their solar system.
+- **Support engineer:** investigates the incident remotely. They can also see a system trigger about a possible issue, even if the owner has not reported it, and they open a proactive incident.
+- **Support team lead:** chooses the next step. They can approve an on-site technician visit with no CFG involved, when the physical issue is already clear. Or they can approve a transfer to CFG, when a deeper software or data investigation is needed.
+- **CFG (software engineer):** investigates after that transfer. If it is a software bug, they fix it. If it turns out to be hardware, they assign the regional technician.
+- **Regional technician company:** uses SolarCare only for incidents assigned to it in its area of Germany. The visit and the full hardware process stay on their side.
 
-> **Customer value:** SolarCare provides one coordinated process for identifying, planning and documenting solar-component replacements, reducing avoidable downtime and keeping the installation's maintenance history up to date.
+## System processes
+
+The steps live in `diagrams/sequence`. This list only names the processes.
+
+- **Incident.** An owner report, or a proactive incident from a system trigger. Support investigates remotely. The team lead then either approves an on-site visit with no CFG, when the physical issue is already clear, or approves a transfer to CFG for a deeper software investigation.
+- **Scheduled health check.** An agreed date or interval opens a check, not a replacement. The technician replaces a part only if the visit says so.
+- **Management access.** The management team can see aggregated information for all systems, or for a subset. That view supports business processes such as planning, partnerships, and reporting. It is not an incident. Raw data is only if needed. There is no sequence for this yet.
 
 ### Initial scope
 
-SolarCare initially focuses on **component replacement for private houses**, including the scheduled health check that can lead to a replacement.
+SolarCare initially focuses on **monitoring and incident support for private houses**, including the scheduled health check. SolarCare is not a warehouse or parts management system. The regional technician firm handles the physical work and the parts.
 
-Automated diagnosis, cleaning contracts, parts marketplaces and recycling services are possible future extensions, but are outside the initial scope.
 
-The current software picture is the C4 set:
+## Software architecture (C4)
+
+The follwoing section shows the parts of SolarCare and how they connect, from the whole system down to the inside of the API.
 
 - [Context](diagrams/c4/context.md)
 - [Containers](diagrams/c4/container.md)
-- [API components](diagrams/c4/component.md)
+- [API components(?)](diagrams/c4/component.md)
 
-An incident at a private house is three sequences. A scheduled health check is separate:
+## UML sequence diagrams
+
+This shows step by step who does what, and in what order, in each process.
 
 - [Incident: FAQ and the customer's software](diagrams/sequence/incident-faq-sequence.md)
 - [Incident: software engineer](diagrams/sequence/incident-software-sequence.md)
@@ -80,7 +84,7 @@ Stakeholders & Market
 
 # SolarCare – Market Analysis
 
-SolarCare monitors PV systems of private homeowners, predicts which component needs maintenance or replacement, and connects owners with a technician before failures cost them money.
+SolarCare monitors PV systems of private homeowners, shows system health from that data, and supports incidents. A regional technician firm handles the visit when one is assigned.
 
 | Topic | Summary |
 |---|---|
