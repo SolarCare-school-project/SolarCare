@@ -26,7 +26,8 @@ What SolarCare does and does not control. What keeps working when SolarCare is d
 
 ### When readings stop
 
-[What SolarCare shows, how long until data is marked out of date, and who is told.]
+When a home stops sending readings, SolarCare shows the last value with the time it was measured. A gap in readings does not by itself mean a part has failed. How support is told about the gap, and what is logged, is in [Logging](logging.md). 
+**The Team Need to explore more about this.**
 
 ## Consequences
 

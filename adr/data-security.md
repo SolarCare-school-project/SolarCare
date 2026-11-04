@@ -34,5 +34,5 @@
 
 ## Open questions
 
-- Who may read the fuller log, and for how long?
 - Should company management see totals across all homes, such as homes online, energy produced, and which part models fail most? If yes, only as anonymised totals, never a single home.
+- Access to a home or an incident is recorded in an audit log, as described in [Logging](logging.md).
