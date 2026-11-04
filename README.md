@@ -105,18 +105,3 @@ SolarCare monitors PV systems of private homeowners, shows system health from th
 | [Jobs to Be Done](docs/Market%20Analysis/Jobs%20to%20Be%20Done.md) | Customers want full yield and no unexpected failures, without needing technical knowledge |
 | [Expansion Path & Scalability](docs/Market%20Analysis/Expansion%20Path%20%26%20Scalability.md) | Start with private homeowners, then multi-family buildings and farms, then businesses and institutions |
 | [Competitor Analysis](docs/Market%20Analysis/Competitor%20Analysis.md) | Manufacturers and installers service only their own systems; independent tools offer data but no repair. SolarCare combines independent fault prediction with repair coordination |
-
-Technologies used, APIs, Cloud - Vlad K
-
-## Technologies  Initial Draft
-
-- **Device integration:** OpenDTU on ESP32, subject to equipment compatibility.
-- **Communication:** MQTT over TLS with a Mosquitto broker.
-- **Backend and APIs:** Python, FastAPI, and REST APIs.
-- **Database:** PostgreSQL for measurements, equipment, and maintenance records.
-- **Frontend:** React website with a house owner screen and a team screen.
-- **Cloud:** AWS considered for hosting; specific services to be decided.
-- **Notifications:** Email provider API for alerts and reminders.
-- **Development:** GitHub, Docker, and GitHub Actions.
-
-All technology choices are preliminary.
