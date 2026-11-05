@@ -68,7 +68,6 @@ The architecture decisions are in the `adr` folder. An ADR (architecture decisio
 - [Availability](adr/availability.md): the internal 99.5% SLA target, which parts need redundancy, and what happens when readings stop.
 - [Logging](adr/logging.md): which events are logged, what must not be logged, and who can read the logs.
 - [Deployment](adr/deployment.md): how a change is reviewed, tested, released, and rolled back.
-- [Open questions](adr/SolarCare-open-questions.md): what the team has not decided yet.
 
 Architecture diagram - Boris B
 
