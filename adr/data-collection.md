@@ -18,7 +18,7 @@ https://www.opendtu.solar/firmware/mqtt_topics/#general-topics
 | --- | --- | --- |
 | `[serial]/0/power` | Power the inverter produces now | Solar System owner, support engineer, software engineer, regional technician, support team lead |
 | `[serial]/0/yieldday` | Energy produced today | Solar System owner, support engineer, software engineer, regional technician |
-| `[serial]/0/yieldtotal` | Energy produced since the inverter was installed | Solar System owner, support engineer, software engineer, regional technician |
+| `[serial]/0/yieldtotal` | Energy produced since the counter was last reset, in kWh | Solar System owner, support engineer, software engineer, regional technician |
 | `[serial]/0/temperature` | Inverter temperature | Solar System owner, support engineer, software engineer, regional technician |
 | `[serial]/status/reachable` | Whether the gateway can reach the inverter | Solar System owner, support engineer, software engineer, regional technician, support team lead |
 | `[serial]/status/producing` | Whether the inverter is producing | Solar System owner, support engineer, software engineer, regional technician |
