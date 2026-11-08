@@ -19,7 +19,7 @@ Each part has a decided role. The technology for each role is proposed and can s
 | Database | Stores readings, incidents, health checks and customer and part records | PostgreSQL | Open source, relational, fits records that link to each other. |
 | Website | The screen for owners, support, CFG and management. Talks only to the API over HTTPS. | React | Builds screens from reusable parts, which suits a dashboard of readings and charts. Many chart libraries exist for it. |
 | Phone app | Lets technicians register a system and record a visit on site, for example the part replaced and the date. Talks only to the API over HTTPS. | Not decided | See Open questions. |
-| Hosting | Runs the broker, API, database and website | One cloud provider, AWS proposed | One provider keeps operations simple. Customer data stays in an EU region because of GDPR. Redundancy is described in [Availability](availability.md). |
+| Hosting | Runs the broker, API, database and website | AWS, region Frankfurt | Managed services for the database copy (RDS), login (Cognito) and email (SES) save the small team building and running them. Free tier and start-up credits keep costs low at the start. AWS is not the cheapest for plain servers (EU providers such as Hetzner are cheaper), but cheaper in total working time. Data stays in Germany. GDPR and Plan B are in [GDPR](gdpr.md#hosting). |
 
 ## Consequences
 
