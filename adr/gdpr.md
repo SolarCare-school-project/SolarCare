@@ -69,3 +69,7 @@ Only necessary cookies, no tracking.
 - Deletion and export have to be built into the API and website.
 - Every new processor needs a DPA first.
 - Hosting depends on the Data Privacy Framework.
+
+## Open questions
+
+- Which external data protection officer service do we use?
