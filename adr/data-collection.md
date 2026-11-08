@@ -62,7 +62,7 @@ OpenDTU does not publish inverter error codes over MQTT, so SolarCare cannot rea
 
 ### Retention
 
-[How long each kind of data is kept.]
+See [GDPR](gdpr.md#retention).
 
 
 ## Consequences
