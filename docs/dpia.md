@@ -78,8 +78,3 @@ No high risk remains, so the data protection authority does not need to be consu
 
 - The DPIA is reviewed by the external data protection officer before launch.
 - It is updated when SolarCare collects new data, adds a processor, or changes hosting.
-
-## Open points
-
-- Encryption at rest and role-based access must be described in [Data security](../adr/data-security.md). That ADR is still empty.
-- How deletion is done in the database and backups.
