@@ -1,36 +1,40 @@
 # SolarCare container diagram
 
-C4 level 2. This opens the SolarCare box into the website, the API, the database, and the MQTT broker. A container here means a program or a data store that runs on its own. It does not mean a Docker container.
+C4 level 2. This opens the SolarCare box into the website, the phone app, the API, the database, and the MQTT broker. A container here means a program or a data store that runs on its own. It does not mean a Docker container.
 
-Arrows show who starts the communication. Technology names are candidates, not final choices.
+Arrows show who starts the communication.
 
 ```mermaid
 C4Container
 title SolarCare containers
 
-Person(owner, "House owner", "Sees only their own house")
-Person(team, "Monitor team, technician, team lead", "Uses the team screen")
+Person(owner, "Solar System owner", "Sees only their own home")
+Person(staff, "SolarCare staff", "Support engineer, support team lead, software engineer, management")
+Person(tech, "Regional technician company", "Assigned incidents in its region")
 
 Container_Boundary(home, "Home") {
-    Container(gateway, "Gateway", "OpenDTU is a candidate", "Reads the inverter and publishes measurements")
+    Container(gateway, "Gateway", "OpenDTU on ESP32", "Reads the inverter and publishes readings")
 }
 
 Container_Boundary(solarcare, "SolarCare") {
-    Container(web, "Website", "React is a candidate", "House owner screen and team screen")
-    Container(api, "API", "FastAPI is a candidate", "Jobs, health checks, the part record, and the reading inbox")
-    ContainerDb(db, "Database", "PostgreSQL is a candidate", "Homes, parts, readings, and jobs")
-    Container(broker, "MQTT broker", "Mosquitto is a candidate", "Routes readings from the home")
+    Container(web, "Website", "React", "Screens for owners and staff")
+    Container(app, "Phone app", "Not decided", "Registers systems and records visits")
+    Container(api, "API", "Python, FastAPI", "Incidents, health checks, the part record, and the reading inbox")
+    ContainerDb(db, "Database", "PostgreSQL", "Homes, parts, readings, and incidents")
+    Container(broker, "MQTT broker", "Mosquitto", "Receives readings from the homes")
 }
 
-Rel(gateway, broker, "Publishes readings", "MQTT")
-Rel(api, broker, "Subscribes", "MQTT")
-Rel(owner, web, "Opens the house owner screen", "HTTPS")
-Rel(team, web, "Opens the team screen", "HTTPS")
+Rel(gateway, broker, "Publishes readings", "MQTT over TLS")
+Rel(api, broker, "Subscribes", "MQTT over TLS")
+Rel(owner, web, "Uses", "HTTPS")
+Rel(staff, web, "Uses", "HTTPS")
+Rel(tech, app, "Uses", "HTTPS")
 Rel(web, api, "Calls", "HTTPS")
-Rel(api, db, "Reads and writes", "SQL")
+Rel(app, api, "Calls", "HTTPS")
+Rel(api, db, "Reads and writes", "SQL over TLS")
 ```
 
-The gateway stays in the home. The house owner screen does not connect to the broker. There is no line from the gateway straight to the database. The API subscribes to the broker, so the broker is not the side that opens that connection.
+The gateway stays in the home. The website and the phone app do not connect to the broker or the database. There is no line from the gateway straight to the database. The API subscribes to the broker, so the broker is not the side that opens that connection.
 
 ## Who can see what
 
@@ -43,6 +47,4 @@ The gateway stays in the home. The house owner screen does not connect to the br
 | Regional technician company | Phone app | Assigned incidents in its region |
 | Management | Website | Anonymised totals |
 
-The full rules are in [Data security](../../adr/data-security.md).
-
-What is taken from the house: power, daily energy, temperature, whether the inverter is reachable, and the time of the measurement. A fuller log is stored only when a report is sent, and only the team can read it. Name, address, and which home it is are personal data.
+The full rules are in [Data security](../../adr/data-security.md). What is collected is in [Data collection](../../adr/data-collection.md). The terms are defined in the [Glossary](../../docs/glossary.md).
