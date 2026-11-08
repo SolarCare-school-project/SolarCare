@@ -75,10 +75,7 @@ See [GDPR](gdpr.md#retention).
 ## Open questions
 
 - How often should readings be collected?
-- How long should measurements be kept?
 - What the fuller log contains is described in [Logging](logging.md).
-- What does the website collect from the browser, such as cookies or usage analytics?
 - Should the regional technician see last update, so they know how old a reading is?
 - Where do the customer details come from: the Solar System owner registers in SolarCare, the regional company sends them, or another company system?
-- Should company management see anonymised totals across all homes?
 - Which solar equipment will SolarCare support? OpenDTU is only a candidat for compatible Hoymiles inverters.
