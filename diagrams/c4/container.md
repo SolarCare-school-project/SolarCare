@@ -34,11 +34,15 @@ The gateway stays in the home. The house owner screen does not connect to the br
 
 ## Who can see what
 
-| Role | Data they can see | What they can do |
+| Role | Uses | Sees |
 | --- | --- | --- |
-| House owner | Their own numbers, the measurement time, and their job status | Open a report. They cannot open the fuller log. |
-| Monitor team | Readings and jobs for the homes in their scope | Open a job |
-| Technician | The assigned job and the log attached to it | Record the visit and the new part |
-| Team lead | The job that needs an unusual approval | Approve or refuse |
+| Solar System owner | Website | Own home only |
+| Support engineer | Website | Homes with an open incident |
+| Support team lead | Website | Incidents waiting for approval |
+| Software engineer (CFG) | Website | One home, after an approved transfer |
+| Regional technician company | Phone app | Assigned incidents in its region |
+| Management | Website | Anonymised totals |
+
+The full rules are in [Data security](../../adr/data-security.md).
 
 What is taken from the house: power, daily energy, temperature, whether the inverter is reachable, and the time of the measurement. A fuller log is stored only when a report is sent, and only the team can read it. Name, address, and which home it is are personal data.
