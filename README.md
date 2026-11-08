@@ -1,7 +1,7 @@
 # SolarCare
 
 ## What is SolarCare?
-The terms used in these docs are defined in the [Glossary](GLOSSARY.md).
+The terms used in these docs are defined in the [Glossary](docs/glossary.md).
 
 **SolarCare is support software for private house owners in Germany.** It monitors, collects readings, manages incidents and health checks for the solar system, and keeps the record of what is installed and its health.
 
