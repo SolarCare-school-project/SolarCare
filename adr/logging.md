@@ -51,7 +51,6 @@ The Solar System owner sees no log. They see their own readings with the time th
 
 ## Open questions
 
-- How long is each log kept?
 - What does the fuller diagnostic log contain?
 - Is an entry flat, such as one JSON object per event, or nested?
 - When is support told that a home has stopped sending readings?
