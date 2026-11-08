@@ -35,6 +35,8 @@ https://www.opendtu.solar/firmware/mqtt_topics/#general-topics
 | `[serial]/[1-4]/power`, `[serial]/[1-4]/voltage` | Power and voltage of each panel input | Regional technician |
 | `[serial]/device/hwpartnumber`, `[serial]/device/hwversion` | Inverter part number and hardware version | Regional technician |
 
+Access is limited as described in [Data security](data-security.md).
+
 ### Collected about the customer
 
 | Data | Why it is needed | Who can see it |
