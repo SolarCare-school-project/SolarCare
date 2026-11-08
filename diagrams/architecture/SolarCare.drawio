@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Stránka-1" id="-CwxSqAggFlAaQqxKD7H">
-    <mxGraphModel dx="2149" dy="2514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2742" dy="2367" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -154,15 +154,15 @@
             <mxPoint x="-13" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <object placeholders="1" c4Name="External e-mail provider" c4Type="API" c4Description="API for sending e-mail notifications" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="tF_7pya4FT6uLWM2vMHv-35">
+        <object placeholders="1" c4Name="Ticketing system" c4Type="App" c4Description="Ticketing system for incident and problem management." label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="tF_7pya4FT6uLWM2vMHv-35">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="120" width="240" x="50" y="-1110" as="geometry" />
+            <mxGeometry height="120" width="240" x="-240" y="-1100" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="tF_7pya4FT6uLWM2vMHv-36" edge="1" parent="1" source="tF_7pya4FT6uLWM2vMHv-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="tF_7pya4FT6uLWM2vMHv-35">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tF_7pya4FT6uLWM2vMHv-46" connectable="0" parent="tF_7pya4FT6uLWM2vMHv-36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;b&gt;Send e-mail notifications&lt;/b&gt;" vertex="1">
+        <mxCell id="tF_7pya4FT6uLWM2vMHv-46" connectable="0" parent="tF_7pya4FT6uLWM2vMHv-36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;b&gt;Create ticket&lt;/b&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.6201" y="-3" as="geometry">
             <mxPoint x="13" y="3" as="offset" />
           </mxGeometry>
@@ -186,6 +186,45 @@
         <mxCell id="tF_7pya4FT6uLWM2vMHv-58" connectable="0" parent="tF_7pya4FT6uLWM2vMHv-57" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;b&gt;Send data&lt;/b&gt;" vertex="1">
           <mxGeometry relative="1" x="0.274" y="1" as="geometry">
             <mxPoint y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nntynRjUNdj7aI3mU4nl-1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="tF_7pya4FT6uLWM2vMHv-35">
+          <mxGeometry relative="1" x="-0.0987" as="geometry">
+            <mxPoint x="64" y="-800" as="sourcePoint" />
+            <mxPoint x="-59.99999999999977" y="-950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nntynRjUNdj7aI3mU4nl-2" connectable="0" parent="nntynRjUNdj7aI3mU4nl-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Create ticket" vertex="1">
+          <mxGeometry relative="1" x="-0.4276" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nntynRjUNdj7aI3mU4nl-9" edge="1" parent="1" source="tF_7pya4FT6uLWM2vMHv-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.014;entryY=0.664;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="tF_7pya4FT6uLWM2vMHv-10">
+          <mxGeometry relative="1" x="0.0283" as="geometry">
+            <Array as="points">
+              <mxPoint x="-120" y="-560" />
+              <mxPoint x="64" y="-560" />
+            </Array>
+            <mxPoint x="-140" y="-910" as="sourcePoint" />
+            <mxPoint x="-70.59999999999991" y="-442.3599999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nntynRjUNdj7aI3mU4nl-11" connectable="0" parent="nntynRjUNdj7aI3mU4nl-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Assign ticket" vertex="1">
+          <mxGeometry relative="1" x="0.6516" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nntynRjUNdj7aI3mU4nl-10" edge="1" parent="1" source="tF_7pya4FT6uLWM2vMHv-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="tF_7pya4FT6uLWM2vMHv-7">
+          <mxGeometry relative="1" x="0.0011" as="geometry">
+            <Array as="points">
+              <mxPoint x="-200" y="-320" />
+              <mxPoint x="64" y="-320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nntynRjUNdj7aI3mU4nl-12" connectable="0" parent="nntynRjUNdj7aI3mU4nl-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Assign ticket" vertex="1">
+          <mxGeometry relative="1" x="0.7236" y="-6" as="geometry">
+            <mxPoint x="9" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>

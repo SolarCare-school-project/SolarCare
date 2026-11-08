@@ -31,12 +31,14 @@ The system monitoring can include:
 
 ## Levels of support, their responsibility and SLAs
 
+Priority definitions: P1 – Critical, P2 – High, P3 – Normal, P4 – Low.
+
 | Level | Name | Responsibility | Response SLA | Resolution SLA |
-|---|---|---|---|---|---|
-| **L0** |
-| **L1** |
-| **L2** |
-| **L3** | 
+|---|---|---|---|---|
+| **L0** | Self-service support | Provides answers to common questions and basic troubleshooting. Unresolved issues go to L1 | No individual response SLA | Self-Service |
+| **L1** | Support Engineer| First-line support and remote investigation. | P1: 1 hour; P2: 4 hours; P3: 1 business day; P4: 2 business days | P1: 2 business days; P2: 5 business days; P3: 10 business days; P4: 5 business days |
+| **L2** | Engineer (CFG) | Second-line technical and software support. | Follows incident priority SLA | P1: 2 business days; P2: 5 business days; P3: 10 business days; P4: 5 business days |
+| **L3** | External Technician | On-site hardware inspection and repair. | According to partner SLA | According to partner SLA and parts availability |
 
 ## System processes
 
@@ -56,6 +58,9 @@ SolarCare initially focuses on **monitoring and incident support for private hou
 
 The follwoing section shows the parts of SolarCare and how they connect, from the whole system down to the inside of the API.
 
+### Basic Architecture
+![SolarCare Architecture](diagrams/architecture/SolarCare.drawio.png)
+
 - [Context](diagrams/c4/context.md)
 - [Containers](diagrams/c4/container.md)
 - [API components(?)](diagrams/c4/component.md)
@@ -71,7 +76,7 @@ This shows step by step who does what, and in what order, in each process.
 
 ## Architecture decisions
 
-The architecture decisions are in the `adr` folder. An ADR (architecture decision record) is a short file that records one design decision, why we made it, and what it changes. Each ADR follows Michael Nygard's format: Status, Context, Decision and Consequences, plus an Open questions section, as this is ongoing project. 
+The architecture decisions are in the `adr` folder. An ADR (architecture decision record) is a short file that records one design decision, why we made it, and what it changes. Each ADR follows Michael Nygard's format: Status, Context, Decision and Consequences, plus an Open questions section, as this is ongoing project.
 
 - [Technology stack](adr/technology-stack.md): the tools SolarCare uses, where each one runs, and why it was chosen.
 - [Interfaces](adr/interfaces.md): each connection between the gateway, broker, API, website, app, what happens when one fails.
