@@ -72,8 +72,6 @@ OpenDTU does not publish inverter error codes over MQTT, so SolarCare cannot rea
 
 ## Open questions
 
-## Open questions
-
 - How often should readings be collected?
 - How long should measurements be kept?
 - What the fuller log contains is described in [Logging](logging.md).
