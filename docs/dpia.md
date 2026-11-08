@@ -1,6 +1,6 @@
 # Data protection impact assessment (DPIA)
 
-**Status:** draft (will be updated)
+**Status:** draft [will be updated]
 **Reviewed by:** [external data protection officer]
 **Date:** [date]
 
