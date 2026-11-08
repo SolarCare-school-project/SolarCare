@@ -6,14 +6,16 @@ C4 level 1. SolarCare is one box. Arrows show who starts the communication. The 
 C4Context
 title SolarCare context
 
-Person(owner, "House owner", "Sees only their own house and can open a report")
-Person(team, "SolarCare team", "Monitor team, technician, and team lead")
-System(solarcare, "SolarCare", "Coordinates health checks and replacement of parts for one home")
-System_Ext(gateway, "Gateway at the home", "Reads the inverter and publishes measurements. OpenDTU is a candidate.")
+Person(owner, "Solar System owner", "Sees only their own home and can raise an incident")
+Person(staff, "SolarCare staff", "Support engineer, support team lead, software engineer, management")
+Person(tech, "Regional technician company", "Registers systems and records visits for assigned incidents")
+System(solarcare, "SolarCare", "Monitors solar systems and handles incidents and health checks")
+System_Ext(gateway, "Gateway at the home", "Reads the inverter and publishes readings. OpenDTU on an ESP32.")
 
-Rel(owner, solarcare, "Uses the house owner screen", "HTTPS")
-Rel(team, solarcare, "Uses the team screen", "HTTPS")
-Rel(gateway, solarcare, "Publishes readings", "MQTT")
+Rel(owner, solarcare, "Uses the website", "HTTPS")
+Rel(staff, solarcare, "Uses the website", "HTTPS")
+Rel(tech, solarcare, "Uses the phone app", "HTTPS")
+Rel(gateway, solarcare, "Publishes readings", "MQTT over TLS")
 ```
 
-Email and a supplier system are not on this picture. They are not part of the current design.
+The terms are defined in the [Glossary](../../docs/glossary.md).
