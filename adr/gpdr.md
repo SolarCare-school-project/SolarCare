@@ -1,7 +1,5 @@
 # GDPR
 
-**Status:** proposed
-
 ## Context
 
 SolarCare processes personal data of Solar System owners: name, email, address, phone number, and the readings of their solar system. Readings are personal data too, because the serial number links them to a home.
@@ -70,7 +68,3 @@ Only necessary cookies, no tracking.
 - Deletion and export have to be built into the API and website.
 - Every new processor needs a DPA first.
 - Hosting depends on the Data Privacy Framework.
-
-## Open questions
-
-- Which data protection officer service and which email provider do we use?
