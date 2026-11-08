@@ -20,7 +20,7 @@ SolarCare collects data from private homes continuously and links it to a person
 | Storage | AWS, region Frankfurt |
 | Retention | See [GDPR](../adr/gdpr.md#retention) |
 
-Data flow: gateway → MQTT broker → API → database → website and phone app. See [data flow diagram](../diagrams/architecture/).
+Data flow: gateway → MQTT broker → API → database → website and phone app. See [data flow diagram](../diagrams/architecture/Data%20flow%20from%20the%20solar%20panels%20to%20SolarCare.png).
 
 ## 2. Necessity and proportionality
 
