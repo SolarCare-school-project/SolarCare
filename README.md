@@ -29,6 +29,15 @@ The system monitoring can include:
 - **CFG (software engineer):** investigates after that transfer. If it is a software bug, they fix it. If it turns out to be hardware, they assign the regional technician.
 - **Regional technician company:** uses SolarCare only for incidents assigned to it in its area of Germany. The visit and the full hardware process stay on their side.
 
+## Levels of support, their responsibility and SLAs
+
+| Level | Name | Responsibility | Response SLA | Resolution SLA |
+|---|---|---|---|---|---|
+| **L0** |
+| **L1** |
+| **L2** |
+| **L3** | 
+
 ## System processes
 
 The steps live in `diagrams/sequence`. This list only names the processes.
