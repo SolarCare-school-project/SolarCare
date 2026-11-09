@@ -22,9 +22,9 @@ Every role sees only what it needs for its task. Access to live data of a home i
 ### How access is protected
 
 - **Authentication:** login is handled by AWS Cognito (region Frankfurt). Owners log in with email and password. Staff and technicians must also use two-factor authentication. After login, the user gets a token that the API checks on every request. SolarCare never stores passwords itself.
-- **Authorization:** the API checks every request against the role and scope of the user. The website and the phone app never reach the database directly.
+- **Authorization:** the API checks every request against the role and scope of the user. The website never reach the database directly.
 - **Gateways:** each gateway has its own login at the broker and may only publish to its own base topic. It cannot read other homes.
-- **Data in transit:** TLS on every connection: gateway to broker, broker to API, website and app to API, API to database. See [Interfaces](interfaces.md).
+- **Data in transit:** TLS on every connection: gateway to broker, broker to API, website to API, API to database. See [Interfaces](interfaces.md).
 - **Data at rest:** database and backups are encrypted. Passwords and keys are kept in a secrets store, not in the code.
 - **Monitoring of access:** the audit log records who opened which home or incident. Failed logins and denied topics at the broker are logged.
 - **Access reviews:** accounts of own staff are removed when someone leaves. Technician companies must report when an employee leaves, as part of their DPA. Accounts not used for 90 days are disabled automatically. Technician company accounts are also checked every 6 months.

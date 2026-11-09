@@ -7,9 +7,9 @@
 
 SolarCare monitors solar systems and manages incidents and health checks. It does not run the solar system, so the panels keep producing power when SolarCare is down. SolarCare also does not control the home's internet connection.
 
-Solar System owners, support, CFG and management use the website and API to see data and handle incidents.
+Solar System owners, support, technicians, R&D CFG and management use the website and API to see data and handle incidents.
 When they are down, none of them can do this until they are back.
-Technicians use a phone app to record their visits and get reading from SolareCare system.
+Technicians use the website on their phone to record their visits and get readings from the SolarCare system.
 
 Telemetry sent while the API or broker is unavailable can be lost, because MQTT QoS 0 (at-most-once delivery) does not store or retransmit messages.
 The Solar System owner then sees a gap in the time series. Incident and customer records are persisted in the database, so a single server failure does not lose them.
@@ -21,7 +21,7 @@ How available the parts we control must be, and what we do when they fail.
 
 | Part | Target | What happens when it is down |
 | --- | --- | --- |
-| Website, Mobile App and API | 99.5% per month (about 3.6 hours of downtime) | Nobody can see readings, handle incidents or update info about onsite visits until it is back. The panels keep producing power. |
+| Website and API | 99.5% per month (about 3.6 hours of downtime) | Nobody can see readings, handle incidents or update info about onsite visits until it is back. The panels keep producing power. |
 
 The target applies only to the parts SolarCare controls: website, API, MQTT broker and database.
 It does not cover the inverter, its firmware, the gateway, the home internet or manufacturer services.
