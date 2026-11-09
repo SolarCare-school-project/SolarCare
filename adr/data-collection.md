@@ -39,15 +39,17 @@ Access is limited as described in [Data security](data-security.md).
 
 ### Collected about the customer
 
-| Data | Why it is needed | Who can see it |
-| --- | --- | --- |
-| Name | To know who the customer is | Solar System owner (own), support engineer and technician for the assigned incident, support team lead for the incident waiting for a decision |
-| Email | Login and notifications | Solar System owner (own), support engineer for the assigned incident |
-| Address | For the technician visit | Solar System owner (own), technician for the assigned incident |
-| Phone number | So the technician can arrange the visit | Solar System owner (own), support engineer and technician for the assigned incident |
-| Inverter serial numbers | To link readings to the right house | Support engineer, software engineer |
+The customer details live in the CRM. SolarCare stores only the CRM customer ID and the inverter serial number that belongs to it. When a user needs a detail, SolarCare reads it from the CRM and shows only what that role is allowed to see.
 
-These details are stored in the SolarCare database so support and the technician can contact the Solar System owner. They are never written to logs. Logs hold IDs, not customer details. See [Logging](logging.md).
+| Data | Why it is needed | Stored in | Who can see it |
+| --- | --- | --- | --- |
+| Name | To know who the customer is | CRM | Solar System owner (own), support engineer and technician for the assigned incident, support team lead for the incident waiting for a decision |
+| Email | Login and notifications | CRM | Solar System owner (own), support engineer for the assigned incident |
+| Address | For the technician visit | CRM | Solar System owner (own), technician for the assigned incident |
+| Phone number | So the technician can arrange the visit | CRM | Solar System owner (own), support engineer and technician for the assigned incident |
+| Customer ID and inverter serial numbers | To link readings to the right house | SolarCare | Support engineer, software engineer |
+
+The CRM details are never stored in the SolarCare database and never written to logs. Logs hold IDs, not customer details. See [Logging](logging.md).
 
 
 ### Never collected
@@ -71,7 +73,7 @@ See [GDPR](gdpr.md#retention).
 
 - Each role sees only the data it needs, because every topic is listed with who sees it.
   Topics we do not subscribe to never reach the database, so the database stays small and holds nothing nobody asked for.
-- Readings and customer details are personal data, because the serial number links a reading to a home.
+- Readings are personal data, because the serial number links a reading to a home. The customer details are in the CRM, so SolarCare holds only one link to them.
   The legal basis, how long each kind of data is kept, and the owner's right to export and delete are in [GDPR](gdpr.md).
   Deletion and export have to work on everything listed here.
 
@@ -79,5 +81,5 @@ See [GDPR](gdpr.md#retention).
 
 - How often should readings be collected?
 - Should the regional technician see last update, so they know how old a reading is?
-- Where do the customer details come from: the Solar System owner registers in SolarCare, the regional company sends them, or another company system?
+- Which customer fields may each role read from the CRM?
 

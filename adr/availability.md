@@ -12,7 +12,7 @@ When they are down, none of them can do this until they are back.
 Technicians use the website on their phone to record their visits and get readings from the SolarCare system.
 
 Telemetry sent while the API or broker is unavailable can be lost, because MQTT QoS 0 (at-most-once delivery) does not store or retransmit messages.
-The Solar System owner then sees a gap in the time series. Incident and customer records are persisted in the database, so a single server failure does not lose them.
+The Solar System owner then sees a gap in the time series. Readings are persisted in the database, so a single server failure does not lose them. Customers, incidents, visits and part records are kept in the CRM.
 
 
 ## Decision
@@ -24,7 +24,7 @@ How available the parts we control must be, and what we do when they fail.
 | Website and API | 99.5% per month (about 3.6 hours of downtime) | Nobody can see readings, handle incidents or update info about onsite visits until it is back. The panels keep producing power. |
 
 The target applies only to the parts SolarCare controls: website, API, MQTT broker and database.
-It does not cover the inverter, its firmware, the gateway, the home internet or manufacturer services.
+It does not cover the inverter, its firmware, the gateway, the home internet, manufacturer services or the CRM.
 
 
 ### Redundancy
@@ -32,8 +32,12 @@ It does not cover the inverter, its firmware, the gateway, the home internet or 
 - The API runs on two servers behind a load balancer, so one server can fail without an outage.
     The early architecture sketch ([SolarCare architecture diagram](../diagrams/architecture/SolarCare.drawio.png)) shows one API, one subscriber and one database. It does not yet show the second server or the load balancer.
 
-- The database has a second copy in another data centre of the same region, so one data centre failure does not lose incident and customer records.
+- The database has a second copy in another data centre of the same region, so one data centre failure does not lose readings, the links to customers and the login accounts.
 - Does the MQTT broker run with a spare, or is it a single server?
+
+### When the CRM is down
+
+The CRM is not part of SolarCare, so we cannot fix an outage ourselves. The user sees an error and is asked to contact support. Readings keep arriving. See [Interfaces](interfaces.md).
 
 ### When readings stop
 
@@ -43,6 +47,7 @@ When a home stops sending readings, SolarCare shows the last value with the time
 ## Consequences
 
 - Readings sent while the API or broker is down can be lost, so the time series can have gaps.
+- Customers, incidents, visits and part records cannot be used while the CRM is down, and our own redundancy does not help.
 - A failure of the whole cloud region is not covered by the two servers or the second database copy.
 - Running two API servers and a second database copy costs more.
 
