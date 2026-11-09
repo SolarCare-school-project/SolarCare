@@ -39,7 +39,3 @@ Every role sees only what it needs for its task. Access to live data of a home i
 - Software engineers often work without live data, which can make some bugs harder to find.
 - Personal data lives in the CRM, which we do not run. Its access rules matter as much as ours.
 - Login depends on AWS Cognito. It uses standard tokens, so it can be replaced if SolarCare leaves AWS.
-
-## Open questions
-
-- How does SolarCare decide that readings look wrong and open an incident automatically? This needs its own ADR.
