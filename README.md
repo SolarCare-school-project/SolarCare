@@ -63,7 +63,7 @@ The follwoing section shows the parts of SolarCare and how they connect, from th
 ![SolarCare Architecture](diagrams/architecture/SolarCare.drawio.png)
 
 - [Context](diagrams/c4/SolarCareContextC4.png)
-- [Containers](diagrams/c4/container.md)
+- [Containers](diagrams/c4/SolarCareContainerC4.png)
 - [API components(?)](diagrams/c4/component.md)
 
 ## UML sequence diagrams
