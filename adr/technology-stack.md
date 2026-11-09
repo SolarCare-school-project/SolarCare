@@ -39,4 +39,5 @@ Each part has a decided role. The technology for each role is proposed and can s
 - How is the phone app built: a phone-friendly website, a cross-platform app, or native apps? Does it need to work without mobile coverage?
 - Do we send email notifications, and with which email service?
 - Do we use AWS managed services (RDS, Cognito, SES) or run some parts ourselves to save cost?
-- How often do we collect readings, and how long do we keep them? See [Data collection](data-collection.md).
+- How often do we collect readings? Check [Data collection](data-collection.md).
+
