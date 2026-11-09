@@ -21,7 +21,7 @@ The system monitoring can include:
 
 **New solar systems:** A solar system is registered in SolarCare before its readings are used. The inverter serial number is linked to the owners home. Readings from an unknown serial number are not added to any home.
 
-**Customers and incidents:** The customer, incident, health check, visit and part records are kept in the company CRM. SolarCare connects to it, stores only the customer ID, and shows each role the data it is allowed to see.
+**Customers and incidents:** The customer, incident, health check, visit and part records are kept in the company CRM (Salesforce), which also tracks the SLA on each case. Users never open the CRM. They work in SolarCare, which checks their role and sends every change to the CRM. SolarCare stores only the customer ID, reads the cases back, and shows each role the data it is allowed to see.
 
 
 ## Who takes part in monitoring and maintenance
@@ -47,7 +47,7 @@ Priority definitions: P1 – Critical, P2 – High, P3 – Normal, P4 – Low.
 
 The steps live in `diagrams/sequence`. This list only names the processes.
 
-- **Incident.** An owner report, or a proactive incident from a system trigger. SolarCare opens it as a case in the CRM. Support investigates remotely. The team lead then either approves an on-site visit with no CFG, when the physical issue is already clear, or approves a transfer to CFG for a deeper software investigation.
+- **Incident.** An owner report, or a proactive incident from a system trigger. SolarCare opens it as a case in the CRM, from a template. Support investigates remotely. The team lead then either approves an on-site visit with no CFG, when the physical issue is already clear, or approves a transfer to CFG for a deeper software investigation.
 - **Scheduled health check.** An agreed date or interval opens a check, not a replacement. The technician replaces a part only if the visit says so.
 - **Management access.** The management team can see aggregated information for all systems, or for a subset. That view supports business processes such as planning, partnerships, and reporting. It is not an incident. Raw data is only if needed. There is no sequence for this yet.
 - **Registering a new solar system.** The regional technician installs Solar panels system. If the owner wants monitoring, the technician registers the system in SolarCare using the website on their phone, and links the inverter serial number to the owner's home. The owner is already a customer in the CRM, because they paid for the system. The owner then gets access through the website, and can raise incidents and see their data. Readings from an unknown serial number are not added to any home. There is no sequence for this yet.
@@ -59,7 +59,7 @@ SolarCare initially focuses on **monitoring and incident support for private hou
 
 ## Software architecture (C4)
 
-The follwoing section shows the parts of SolarCare and how they connect, from the whole system down to the inside of the API.
+The following section shows the parts of SolarCare and how they connect, from the whole system down to the inside of the API.
 
 ### Architecture overview
 ![SolarCare Architecture](diagrams/architecture/SolarCare.drawio.png)
