@@ -87,7 +87,6 @@ The architecture decisions are in the `adr` folder. An ADR (architecture decisio
 - [Data security](adr/data-security.md): who may see which data, who may act on it, and how access is protected.
 - [Availability](adr/availability.md): the internal 99.5% SLA target, which parts need redundancy, and what happens when readings stop.
 - [Logging](adr/logging.md): which events are logged, what must not be logged, and who can read the logs.
-- [Deployment](adr/deployment.md): how a change is reviewed, tested, released, and rolled back.
 - [GDPR](adr/gdpr.md): roles, legal basis, hosting, retention, owner rights and data breaches.
 - [DPIA](docs/dpia.md): the data protection impact assessment, its risks and measures.
 
