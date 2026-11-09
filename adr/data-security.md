@@ -10,14 +10,14 @@ SolarCare stores the readings of Solar System owners and a link to each customer
 
 | Role | Data they can see | What they can do |
 | --- | --- | --- |
-| Solar System owner | Own readings, own contact details, own incidents | Raise an incident, edit contact details, export and delete own data |
-| Support engineer | Readings and contact details only for homes with an open incident. Incidents are opened by the owner or automatically by SolarCare when readings look wrong | Handle incidents, ask the team lead for approval |
+| Solar System owner | Own readings, own contact details, own incidents | Raise an incident, ask for a change of contact details (this creates a case, and support updates the CRM), export and delete own data |
+| Support engineer | Readings and customer details only for homes with an open incident. The customer details are read from the CRM, found by the serial number of the case. Incidents are opened by the owner or automatically by SolarCare when readings look wrong | Handle incidents, ask the team lead for approval |
 | Support team lead | Incidents waiting for a decision, with name of the owner | Approve or refuse a transfer or a technician visit |
 | Software engineer (CFG) | Anonymised or test data. Live data of one home only after an approved transfer | Investigate and fix software bugs, assign a technician |
 | Regional technician company | Assigned incidents in its region: address, phone, name, readings | Record the visit and the replaced part, register a new system |
 | Management | Anonymised totals over at least 10 homes | Reports and planning |
 
-Every role sees only what it needs for its task. Access to live data of a home is recorded in the audit log, see [Logging](logging.md).
+Every role sees only what it needs for its task. Access to live data of a home, and every time customer details are read from the CRM, is recorded in the audit log, see [Logging](logging.md).
 
 ### How access is protected
 
