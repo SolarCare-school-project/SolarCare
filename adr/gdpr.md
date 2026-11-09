@@ -42,8 +42,8 @@ When SolarCare expands to larger institutions, a switch to Microsoft Azure can b
 | --- | --- | --- |
 | Raw readings | 2 years, then daily totals | Faults are found by comparing with the same season last year. Two years give one full year to compare against. After that, detail is no longer needed. |
 | Daily totals | Contract duration | Show slow loss of output over many years, for example panel ageing. Small and less revealing than raw readings. |
-| Incidents and visits | Contract + 3 years | Claims about a repair can be made for 3 years (regular limitation period, § 195 BGB). We need the record to respond. |
-| Customer details | Contract + 30 days | Only needed while the contract runs. 30 days cover the last open incident or visit. Invoices are kept separately for 8 years, as tax law requires (§ 147 AO). |
+| Incidents and visits | Contract + 3 years | Claims about a repair can be made for 3 years (regular limitation period, § 195 BGB https://www.gesetze-im-internet.de/bgb/__195.html). We need the record to respond. |
+| Customer details | Contract + 30 days | Only needed while the contract runs. 30 days cover the last open incident or visit. Invoices are kept separately for 8 years, as tax law requires (§ 147 AO), https://www.gesetze-im-internet.de/ao_1977/__147.html . |
 | Application logs | 30 days | Enough to find and fix an error. Short, so personal data that slips into a log by mistake is gone soon. |
 | Audit log | 1 year | A misuse of access is often found late. One year lets us check who opened which home. |
 | Backups | 30 days | Lets us restore after a failure. Deleted data is also gone from backups after 30 days, which matches the deletion promise to owners. |
