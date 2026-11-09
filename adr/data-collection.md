@@ -35,6 +35,8 @@ https://www.opendtu.solar/firmware/mqtt_topics/#general-topics
 | `[serial]/[1-4]/power`, `[serial]/[1-4]/voltage` | Power and voltage of each panel input | Regional technician |
 | `[serial]/device/hwpartnumber`, `[serial]/device/hwversion` | Inverter part number and hardware version | Regional technician |
 
+Access is limited as described in [Data security](data-security.md).
+
 ### Collected about the customer
 
 | Data | Why it is needed | Who can see it |
@@ -62,23 +64,20 @@ OpenDTU does not publish inverter error codes over MQTT, so SolarCare cannot rea
 
 ### Retention
 
-[How long each kind of data is kept.]
+See [GDPR](gdpr.md#retention).
 
 
 ## Consequences
 
-- [What this makes possible.]
-- [Privacy and GDPR impact.]
-
-## Open questions
+- Each role sees only the data it needs, because every topic is listed with who sees it.
+  Topics we do not subscribe to never reach the database, so the database stays small and holds nothing nobody asked for.
+- Readings and customer details are personal data, because the serial number links a reading to a home.
+  The legal basis, how long each kind of data is kept, and the owner's right to export and delete are in [GDPR](gdpr.md).
+  Deletion and export have to work on everything listed here.
 
 ## Open questions
 
 - How often should readings be collected?
-- How long should measurements be kept?
-- What the fuller log contains is described in [Logging](logging.md).
-- What does the website collect from the browser, such as cookies or usage analytics?
 - Should the regional technician see last update, so they know how old a reading is?
 - Where do the customer details come from: the Solar System owner registers in SolarCare, the regional company sends them, or another company system?
-- Should company management see anonymised totals across all homes?
-- Which solar equipment will SolarCare support? OpenDTU is only a candidat for compatible Hoymiles inverters.
+

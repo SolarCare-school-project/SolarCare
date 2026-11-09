@@ -30,4 +30,4 @@ Each release writes a deployment log: which version went out, when, and who appr
 - How long is the deployment log kept, and who can read it?
 - How is a change to the API or the website reviewed, tested, built, deployed, checked, and rolled back?
 - Where are secrets kept, and who may release a change?
-- When is an old app version blocked and the user asked to update?
+- When is an old website version blocked and the user asked to update?

@@ -1,6 +1,7 @@
 # SolarCare
 
 ## What is SolarCare?
+The terms used in these docs are defined in the [Glossary](docs/glossary.md).
 
 **SolarCare is support software for private house owners in Germany.** It monitors, collects readings, manages incidents and health checks for the solar system, and keeps the record of what is installed and its health.
 
@@ -47,7 +48,7 @@ The steps live in `diagrams/sequence`. This list only names the processes.
 - **Incident.** An owner report, or a proactive incident from a system trigger. Support investigates remotely. The team lead then either approves an on-site visit with no CFG, when the physical issue is already clear, or approves a transfer to CFG for a deeper software investigation.
 - **Scheduled health check.** An agreed date or interval opens a check, not a replacement. The technician replaces a part only if the visit says so.
 - **Management access.** The management team can see aggregated information for all systems, or for a subset. That view supports business processes such as planning, partnerships, and reporting. It is not an incident. Raw data is only if needed. There is no sequence for this yet.
-- **Registering a new solar system.** The regional technician installs Solar panels system. If the owner wants monitoring, the technician registers the system in SolarCare using the phone app, and links the inverter serial number to the owner's home. The owner then gets access through the website, and can raise incidents and see their data. Readings from an unknown serial number are not added to any home. There is no sequence for this yet.
+- **Registering a new solar system.** The regional technician installs Solar panels system. If the owner wants monitoring, the technician registers the system in SolarCare using the website on their phone, and links the inverter serial number to the owner's home. The owner then gets access through the website, and can raise incidents and see their data. Readings from an unknown serial number are not added to any home. There is no sequence for this yet.
 
 ### Initial scope
 
@@ -61,7 +62,7 @@ The follwoing section shows the parts of SolarCare and how they connect, from th
 ### Basic Architecture
 ![SolarCare Architecture](diagrams/architecture/SolarCare.drawio.png)
 
-- [Context](diagrams/c4/context.md)
+- [Context](diagrams/c4/SolarCareContextC4.png)
 - [Containers](diagrams/c4/container.md)
 - [API components(?)](diagrams/c4/component.md)
 
@@ -79,12 +80,14 @@ This shows step by step who does what, and in what order, in each process.
 The architecture decisions are in the `adr` folder. An ADR (architecture decision record) is a short file that records one design decision, why we made it, and what it changes. Each ADR follows Michael Nygard's format: Status, Context, Decision and Consequences, plus an Open questions section, as this is ongoing project.
 
 - [Technology stack](adr/technology-stack.md): the tools SolarCare uses, where each one runs, and why it was chosen.
-- [Interfaces](adr/interfaces.md): each connection between the gateway, broker, API, website, app, what happens when one fails.
+- [Interfaces](adr/interfaces.md): each connection between the gateway, broker, API, database and website, what happens when one fails.
 - [Data collection](adr/data-collection.md): which readings and customer details are collected, and which are never collected.
 - [Data security](adr/data-security.md): who may see which data, who may act on it, and how access is protected.
 - [Availability](adr/availability.md): the internal 99.5% SLA target, which parts need redundancy, and what happens when readings stop.
 - [Logging](adr/logging.md): which events are logged, what must not be logged, and who can read the logs.
 - [Deployment](adr/deployment.md): how a change is reviewed, tested, released, and rolled back.
+- [GDPR](adr/gdpr.md): roles, legal basis, hosting, retention, owner rights and data breaches.
+- [DPIA](docs/dpia.md): the data protection impact assessment, its risks and measures.
 
 Architecture diagram - Boris B
 

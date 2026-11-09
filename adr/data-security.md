@@ -1,10 +1,8 @@
 # Data security
 
-**Status:** proposed
-
 ## Context
 
-[What needs protecting, and which stakeholders need which data.]
+SolarCare stores readings and contact details of Solar System owners. Readings can show when people are at home, so they need the same protection as contact details. Each role needs different data, and no role needs all of it. What is collected is in [Data collection](data-collection.md). Retention and GDPR roles are in [GDPR](gdpr.md).
 
 ## Decision
 
@@ -12,27 +10,34 @@
 
 | Role | Data they can see | What they can do |
 | --- | --- | --- |
-| Solar System owner | | |
-| Support engineer | | |
-| Support team lead | | |
-| Software engineer (CFG) | | |
-| Regional technician company | | |
-| Management | | |
+| Solar System owner | Own readings, own contact details, own incidents | Raise an incident, edit contact details, export and delete own data |
+| Support engineer | Readings and contact details only for homes with an open incident. Incidents are opened by the owner or automatically by SolarCare when readings look wrong | Handle incidents, ask the team lead for approval |
+| Support team lead | Incidents waiting for a decision, with name of the owner | Approve or refuse a transfer or a technician visit |
+| Software engineer (CFG) | Anonymised or test data. Live data of one home only after an approved transfer | Investigate and fix software bugs, assign a technician |
+| Regional technician company | Assigned incidents in its region: address, phone, name, readings | Record the visit and the replaced part, register a new system |
+| Management | Anonymised totals over at least 10 homes | Reports and planning |
+
+Every role sees only what it needs for its task. Access to live data of a home is recorded in the audit log, see [Logging](logging.md).
 
 ### How access is protected
 
-- **Authentication (who are you):** [decision]
-- **Authorization (what may you do):** [decision]
-- **Data in transit:** [decision]
-- **Data at rest:** [decision]
-- **Monitoring of access:** [decision]
+- **Authentication:** login is handled by AWS Cognito (region Frankfurt). Owners log in with email and password. Staff and technicians must also use two-factor authentication. After login, the user gets a token that the API checks on every request. SolarCare never stores passwords itself.
+- **Authorization:** the API checks every request against the role and scope of the user. The website never reach the database directly.
+- **Gateways:** each gateway has its own login at the broker and may only publish to its own base topic. It cannot read other homes.
+- **Data in transit:** TLS on every connection: gateway to broker, broker to API, website to API, API to database. See [Interfaces](interfaces.md).
+- **Data at rest:** database and backups are encrypted. Passwords and keys are kept in a secrets store, not in the code.
+- **Monitoring of access:** the audit log records who opened which home or incident. Failed logins and denied topics at the broker are logged.
+- **Access reviews:** accounts of own staff are removed when someone leaves. Technician companies must report when an employee leaves, as part of their DPA. Accounts not used for 90 days are disabled automatically. Technician company accounts are also checked every 6 months.
 
 ## Consequences
 
-- [What this protects.]
-- [What it costs, or what is still exposed.]
+- An owner, technician or employee can only see what their task needs.
+- No one looks at a home without an incident.
+- A stolen gateway login only exposes the readings of one home.
+- Two-factor authentication adds a step for staff and technicians.
+- Software engineers often work without live data, which can make some bugs harder to find.
+- Login depends on AWS Cognito. It uses standard tokens, so it can be replaced if SolarCare leaves AWS.
 
 ## Open questions
 
-- Should company management see totals across all homes, such as homes online, energy produced, and which part models fail most? If yes, only as anonymised totals, never a single home.
-- Access to a home or an incident is recorded in an audit log, as described in [Logging](logging.md).
+- How does SolarCare decide that readings look wrong and open an incident automatically? This needs its own ADR.

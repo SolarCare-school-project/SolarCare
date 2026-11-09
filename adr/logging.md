@@ -40,7 +40,7 @@ The Solar System owner sees no log. They see their own readings with the time th
 
 - A filter in the logging code removes known personal fields before an entry is written.
 - A test in the build fails if a log line looks like an email address or a phone number.
-- Logs are kept for a short, fixed time, so a mistake expires.
+- Application logs are kept for 30 days and the audit log for 1 year, so a mistake expires. See [GDPR](gdpr.md#retention).
 
 ## Consequences
 
@@ -51,7 +51,6 @@ The Solar System owner sees no log. They see their own readings with the time th
 
 ## Open questions
 
-- How long is each log kept?
 - What does the fuller diagnostic log contain?
 - Is an entry flat, such as one JSON object per event, or nested?
 - When is support told that a home has stopped sending readings?

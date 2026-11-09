@@ -1,6 +1,6 @@
-# Agreed date: the monitor team starts the health check
+# Agreed date: the support engineer starts the health check
 
-This job exists only for a part that has its own agreed date on the record. The date comes from that model's maker guidance or from the policy agreed with the house owner. There is no one number of years for every solar part.
+This health check exists only for a part that has its own agreed date on the record. The date comes from that model's maker guidance or from the policy agreed with the Solar System owner. There is no one number of years for every solar part.
 
 The years and warranty lengths below are proposals to check. They are not rules we have confirmed.
 
@@ -27,21 +27,23 @@ How to read it:
 
 ```mermaid
 sequenceDiagram
-  actor Monitor as Monitor team
+  actor Support as Support engineer
   participant Site as SolarCare
-  actor Home as House owner
-  actor Tech as Technician
+  actor Owner as Solar System owner
+  actor Tech as Regional technician
 
-  Site-->>Monitor: This part has reached its agreed date
-  Monitor->>Site: Create a health-check job
-  Monitor->>Home: A visit is planned
-  Note over Tech,Home: Technician visits and checks the part
+  Site-->>Support: This part has reached its agreed date
+  Support->>Site: Create a health check
+  Support->>Owner: A visit is planned
+  Note over Tech,Owner: Regional technician visits and checks the part
   alt Check says the part should be replaced
-    Note over Tech: Technician replaces the part
+    Note over Tech: Regional technician replaces the part
     Tech->>Site: Record the new part and its date
   else Check says leave it
     Tech->>Site: Record the check and the next date
   end
 ```
 
-A replacement happens only when the check says so. An incident at the house follows the incident sequences. This scheduled check does not.
+A replacement happens only when the check says so. An incident at the home follows the incident sequences. This scheduled check does not.
+
+The terms are defined in the [Glossary](../../docs/glossary.md).
