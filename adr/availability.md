@@ -39,6 +39,12 @@ It does not cover the inverter, its firmware, the gateway, the home internet, ma
 
 The CRM is not part of SolarCare, so we cannot fix an outage ourselves. The user sees an error and is asked to contact support. Readings keep arriving. See [Interfaces](interfaces.md).
 
+### When SolarCare is down
+
+Users never open the CRM. When the website or API is down, only the support team lead role may use the CRM directly, to update a case or to create a new one. The lead must fill in the customer ID and the inverter serial number, so that SolarCare can find the case later.
+
+SolarCare keeps no list of cases. It asks the CRM, for example for all cases of one customer ID. A case created or changed directly in the CRM therefore shows up the next time it is read, and nothing needs to be synced.
+
 ### When readings stop
 
 When a home stops sending readings, SolarCare shows the last value with the time it was measured. A gap in readings does not by itself mean a part has failed. How support is told about the gap, and what is logged, is in [Logging](logging.md).
@@ -48,12 +54,14 @@ When a home stops sending readings, SolarCare shows the last value with the time
 
 - Readings sent while the API or broker is down can be lost, so the time series can have gaps.
 - Customers, incidents, visits and part records cannot be used while the CRM is down, and our own redundancy does not help.
+- Changes made directly in the CRM while SolarCare is down are not in our audit log. The CRM's own history has to cover them.
 - A failure of the whole cloud region is not covered by the two servers or the second database copy.
 - Running two API servers and a second database copy costs more.
 
 ## Open questions
 
 - Is 99.5% a promised SLA to customers or an internal SLO? The team still needs to decide
+- Can Salesforce limit direct access to the support team lead role, and can it require the customer ID and the serial number on a new case?
 - Which QoS level do we use? QoS 1 with a persistent session would let the broker hold readings while the API is away
 - Does the gateway buffer readings when the broker or the home internet is down? Is this possible with OpenDTU?
 - If the gateway buffers, how large is the buffer and how long can it hold readings?
