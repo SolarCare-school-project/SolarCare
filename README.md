@@ -57,7 +57,7 @@ SolarCare initially focuses on **monitoring and incident support for private hou
 
 The follwoing section shows the parts of SolarCare and how they connect, from the whole system down to the inside of the API.
 
-- [Context](diagrams/c4/context.md)
+- [Context](diagrams/c4/SolarCareContextC4.png)
 - [Containers](diagrams/c4/container.md)
 - [API components(?)](diagrams/c4/component.md)
 
