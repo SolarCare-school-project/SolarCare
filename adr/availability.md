@@ -52,4 +52,3 @@ When a home stops sending readings, SolarCare shows the last value with the time
 - Which QoS level do we use? QoS 1 with a persistent session would let the broker hold readings while the API is away
 - Does the gateway buffer readings when the broker or the home internet is down? Is this possible with OpenDTU?
 - If the gateway buffers, how large is the buffer and how long can it hold readings?
-- Does ingestion (broker to database) run separately from the website API?
