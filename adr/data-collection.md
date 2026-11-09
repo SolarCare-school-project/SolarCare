@@ -79,7 +79,5 @@ See [GDPR](gdpr.md#retention).
 
 ## Open questions
 
-- How often should readings be collected?
-- Should the regional technician see last update, so they know how old a reading is?
-- Which customer fields may each role read from the CRM?
-
+- How often should readings be collected? It depends on the publisher rate [-5secs]. Option to refresh latest data from the system.
+- Should the regional technician see last update, so they know how old a reading is? Yes
