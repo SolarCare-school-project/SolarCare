@@ -1,5 +1,10 @@
 # SolarCare
 
+## What this README contains
+
+This README gives the overview of what SolarCare is, who uses it, and how the processes work.
+For more detail, the diagrams and ADR files are linked below: the [C4 diagrams](#software-architecture-c4) show the system from wide to detailed, the [sequence diagrams](#uml-sequence-diagrams) show how the incident and health check processes run, and the [ADRs](#architecture-decisions) give the reasons and deep technical overview behind the design.
+
 ## What is SolarCare?
 The terms used in these docs are defined in the [Glossary](docs/glossary.md).
 
@@ -70,7 +75,7 @@ The following section shows the parts of SolarCare and how they connect, from th
 
 ## UML sequence diagrams
 
-This shows step by step who does what, and in what order, in each process.
+This shows step by step who does what, and in what order, in each process. In every sequence below, users work in SolarCare. 
 
 - [Incident: FAQ and the customer's software](diagrams/sequence/incident-faq-sequence.md)
 - [Incident: software engineer](diagrams/sequence/incident-software-sequence.md)
