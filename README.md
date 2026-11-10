@@ -119,14 +119,3 @@ Stakeholders & Market
 | **Software engineers** | Build the platform, connect inverter APIs, forecasting & designing models. | High | Medium | Manage closely | Anonymised or test data; live data only for incidents, logged. |
 | **Support engineer** | Handles tickets, coordinates installers.<br><br>**Support levels:**<br>• **L0 – Self-service:** FAQ and help center.<br>• **L1 – Basic support:** General questions and account issues.<br>• **L2 – Technical support (software engineer):** Technical issues connected to our software.<br>• **L3 – Physical support:** Assign to a third-party replacement company. | High | Medium | Keep informed | Only customers with an open ticket |
 | **Marketing / GTM & sales** | Customer acquisition/growth, installer partnerships. | Medium | Low | Keep informed | Opt-in contact data + anonymised aggregated analytics; no system data. |
-
-# SolarCare – Market Analysis
-
-SolarCare monitors PV systems of private homeowners, shows system health from that data, and supports incidents. A regional technician firm handles the visit when one is assigned.
-
-| Topic | Summary |
-|---|---|
-| [Target Group](docs/Market%20Analysis/Target%20Group.md) | Private homeowners in the DACH region with a 5–15 kWp rooftop system, 3–12 years old |
-| [Jobs to Be Done](docs/Market%20Analysis/Jobs%20to%20Be%20Done.md) | Customers want full yield and no unexpected failures, without needing technical knowledge |
-| [Expansion Path & Scalability](docs/Market%20Analysis/Expansion%20Path%20%26%20Scalability.md) | Start with private homeowners, then multi-family buildings and farms, then businesses and institutions |
-| [Competitor Analysis](docs/Market%20Analysis/Competitor%20Analysis.md) | Manufacturers and installers service only their own systems; independent tools offer data but no repair. SolarCare combines independent fault prediction with repair coordination |
