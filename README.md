@@ -66,7 +66,9 @@ This shows step by step who does what, and in what order, in incident and health
 ![SolarCare Architecture](diagrams/architecture/SolarCare.drawio.png)
 
 - C4 Model Architecture
-    - Context Diagram - SolarCare as one box, with the people and the outside systems around it.
+    - Note: The gateway is OpenDTU, the CRM is Salesforce, and the platform is AWS.
+    
+    - Context Diagram - SolarCare as one box, with the people and the outside systems around it. 
     ![Context Diagram](diagrams/c4/SolarCareContextC4.png)
 
     - Containers Diagram - The parts inside SolarCare (website, API, broker, db) and how they connect.
