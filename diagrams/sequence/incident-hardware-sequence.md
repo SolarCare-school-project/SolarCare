@@ -9,7 +9,7 @@ How to read it:
 - Read from top to bottom. The names repeated at the bottom are the same people, not a second group.
 - A solid arrow is a request. A dashed arrow is the reply.
 - A dotted box marked **alt** is a choice. Only one of the bracketed cases happens.
-- A yellow note is a reminder on that step. It is not a message to another person.
+- A blue note is a reminder on that step. It is not a message to another person.
 
 ![UML incident hardware](uml-diagrams/UML-incident_hardware.drawio.png)
 
