@@ -3,33 +3,26 @@
 ## What this README contains
 
 This README gives the overview of what SolarCare is, who uses it, and how the processes work.
-For more detail, the diagrams and ADR files are linked below: the [C4 diagrams](#software-architecture-c4) show the system from wide to detailed, the [sequence diagrams](#uml-sequence-diagrams) show how the incident and health check processes run, and the [ADRs](#architecture-decisions) give the reasons and deep technical overview behind the design.
+For more detail, the diagrams and ADR files are linked below: the [General System and C4 diagrams](#architecture-overview) show the system from wide to detailed, the [sequence diagrams](#uml-sequence-diagrams) show how the incident and health check processes run, and the [ADRs](#architecture-decisions) give the reasons and deep technical overview behind the design. The terms used in these docs are defined in the [Glossary](docs/glossary.md).
 
 ## What is SolarCare?
-The terms used in these docs are defined in the [Glossary](docs/glossary.md).
-
 **SolarCare is support software for private house owners in Germany.** It monitors, collects readings, manages incidents and health checks for the solar system, and keeps the record of what is installed and its health.
 
-The system monitoring can include:
+Live monitoring comes from the gateway and it covers:
+- The microinverter (power, energy, temperature, status)
+- The panel inputs on that inverter
+- The gateway itself (online status, Wi-Fi and radio signal)
 
-- Solar panels
-- Inverters or microinverters
-- Power optimizers, where installed
-- Batteries, where installed
-- Energy meters and monitoring gateways
-- Cables and connectors
-- Relevant electrical protection components
+### Important notes
 
-## Important notes
-
-**Inspection interval:** German guidance recommends a full-system inspection every four years. SolarCare may set a shorter interval under its maintenance policy.
+**Inspection interval:** The German standard practice is a full-system inspection every four years. SolarCare may open a health check earlier, for example when a part reaches its agreed date. It must not skip the four-year check, so every system is still inspected at least once every four years.
 
 **New solar systems:** A solar system is registered in SolarCare before its readings are used. The inverter serial number is linked to the owners home. Readings from an unknown serial number are not added to any home.
 
-**Customers and incidents:** The customer, incident, health check, visit and part records are kept in the company CRM (Salesforce), which also tracks the SLA on each case. Users never open the CRM. They work in SolarCare, which checks their role and sends every change to the CRM. SolarCare stores only the customer ID, reads the cases back, and shows each role the data it is allowed to see.
+**Customers and incidents:** The customer, incident, health check, visit and part records are kept in the company CRM, which also tracks the SLA on each case. Users never open the CRM.
+They work in SolarCare, which checks their role and sends every change to the CRM. SolarCare stores only the customer ID, reads the cases back, and shows each role the data it is allowed to see.
 
-
-## Who takes part in monitoring and maintenance
+## Who uses SolarCare
 
 - **Solar System owner:** sees their own system and can raise an incident case if they find an issue with their solar system.
 - **Support engineer:** investigates the incident remotely. They can also see a system trigger about a possible issue, even if the owner has not reported it, and they open a proactive incident.
@@ -57,34 +50,36 @@ The steps live in `diagrams/sequence`. This list only names the processes.
 - **Management access.** The management team can see aggregated information for all systems, or for a subset. That view supports business processes such as planning, partnerships, and reporting. It is not an incident. Raw data is only if needed. There is no sequence for this yet.
 - **Registering a new solar system.** The regional technician installs Solar panels system. If the owner wants monitoring, the technician registers the system in SolarCare using the website on their phone, and links the inverter serial number to the owner's home. The owner is already a customer in the CRM, because they paid for the system. The owner then gets access through the website, and can raise incidents and see their data. Readings from an unknown serial number are not added to any home. There is no sequence for this yet.
 
-### Initial scope
+### UML sequence diagrams
 
-SolarCare initially focuses on **monitoring and incident support for private houses**, including the scheduled health check. SolarCare is not a warehouse or parts management system. The regional technician firm handles the physical work and the parts.
-
-
-## Software architecture (C4)
-
-The following section shows the parts of SolarCare and how they connect, from the whole system down to the inside of the API.
-
-### Architecture overview
-![SolarCare Architecture](diagrams/architecture/SolarCare.drawio.png)
-
-- [Context](diagrams/c4/SolarCareContextC4.png)
-- [Containers](diagrams/c4/SolarCareContainerC4.png)
-- [API components(?)](diagrams/c4/component.md)
-
-## UML sequence diagrams
-
-This shows step by step who does what, and in what order, in each process. In every sequence below, users work in SolarCare. 
+This shows step by step who does what, and in what order, in incident and health check processes. In every sequence below, users work in SolarCare.
 
 - [Incident: FAQ and the customer's software](diagrams/sequence/incident-faq-sequence.md)
 - [Incident: software engineer](diagrams/sequence/incident-software-sequence.md)
 - [Incident: hardware already clear](diagrams/sequence/incident-hardware-sequence.md)
 - [Scheduled health check](diagrams/sequence/health-check-sequence.md)
 
-## Architecture decisions
 
-The architecture decisions are in the `adr` folder. An ADR (architecture decision record) is a short file that records one design decision, why we made it, and what it changes. Each ADR follows Michael Nygard's format: Status, Context, Decision and Consequences, plus an Open questions section, as this is ongoing project.
+## Architecture overview
+- General System overview 
+
+![SolarCare Architecture](diagrams/architecture/SolarCare.drawio.png)
+
+- C4 Model Architecture
+    - Context Diagram - SolarCare as one box, with the people and the outside systems around it.
+    ![Context Diagram](diagrams/c4/SolarCareContextC4.png)
+
+    - Containers Diagram - The parts inside SolarCare (website, API, broker, db) and how they connect.
+    ![Containers Diagram](diagrams/c4/SolarCareContainerC4.png)
+
+    - Components Diagram - What is inside the API: each job it does, and how it uses the website, broker, database and CRM.
+    ![Components Diagram](diagrams/c4/SolarCareComponentC4.png)
+
+
+## Architecture decisions 
+
+The architecture decisions are in the `adr` folder. An ADR (architecture decision record) is a short file that records one design decision, why we made it, and what it changes.
+If you want a deeper look at the technologies, connections and interfaces, open the ADR files below.
 
 - [Technology stack](adr/technology-stack.md): the tools SolarCare uses, where each one runs, and why it was chosen.
 - [Interfaces](adr/interfaces.md): each connection between the gateway, broker, API, database and website, what happens when one fails.
@@ -95,9 +90,6 @@ The architecture decisions are in the `adr` folder. An ADR (architecture decisio
 - [GDPR](adr/gdpr.md): roles, legal basis, hosting, retention, owner rights and data breaches.
 - [DPIA](docs/dpia.md): the data protection impact assessment, its risks and measures.
 
-Architecture diagram - Boris B
-
-Stakeholders & Market
 ## Stakeholder Analysis
 
 ### External Stakeholders
