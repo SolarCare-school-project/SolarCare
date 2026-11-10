@@ -25,24 +25,8 @@ How to read it:
 - A dotted box marked **alt** is a choice. Only one of the bracketed cases happens.
 - A yellow note is a reminder on that step. It is not a message to another person.
 
-```mermaid
-sequenceDiagram
-  actor Support as Support engineer
-  participant Site as SolarCare
-  actor Owner as Solar System owner
-  actor Tech as Regional technician
+![UML health ceck](diagrams/sequence/diagrams/UML-health_check_sequence.drawio.png)
 
-  Site-->>Support: This part has reached its agreed date
-  Support->>Site: Create a health check
-  Support->>Owner: A visit is planned
-  Note over Tech,Owner: Regional technician visits and checks the part
-  alt Check says the part should be replaced
-    Note over Tech: Regional technician replaces the part
-    Tech->>Site: Record the new part and its date
-  else Check says leave it
-    Tech->>Site: Record the check and the next date
-  end
-```
 
 A replacement happens only when the check says so. An incident at the home follows the incident sequences. This scheduled check does not.
 

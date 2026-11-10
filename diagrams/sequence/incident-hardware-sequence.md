@@ -11,16 +11,6 @@ How to read it:
 - A dotted box marked **alt** is a choice. Only one of the bracketed cases happens.
 - A yellow note is a reminder on that step. It is not a message to another person.
 
-```mermaid
-sequenceDiagram
-  actor L1 as L1 Support engineer
-  actor Lead as Support team lead
-  actor L3 as L3 Regional technician
-
-  Note over L1: Hardware is already clear
-  L1->>Lead: Ask to assign the regional technician
-  Lead-->>L1: Approve
-  L1->>L3: Assign the technician team for that region
-```
+![UML incident hardware](diagrams/sequence/diagrams/UML-incident_hardware.drawio.png)
 
 If the support team lead does not approve, the incident stays with L1.

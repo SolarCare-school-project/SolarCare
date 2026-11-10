@@ -11,22 +11,4 @@ How to read it:
 - A dotted box marked **alt** is a choice. Only one of the bracketed cases happens.
 - A yellow note is a reminder on that step. It is not a message to another person.
 
-```mermaid
-sequenceDiagram
-  actor Owner as House owner
-  participant FAQ as L0 FAQ
-  actor L1 as L1 Support engineer
-
-  Owner->>FAQ: Look up the incident
-  alt The FAQ answers it
-    FAQ-->>Owner: Answer
-  else The FAQ does not answer it
-    Owner->>L1: Ask for help
-    Note over L1: Check the customer's software, such as an app crash
-    alt The problem is on the customer's side
-      L1-->>Owner: Help with that software
-    else Software looks fine, data looks wrong or strange
-      Note over L1: Continue in the software incident sequence
-    end
-  end
-```
+![UML incident FAQ](diagrams/sequence/diagrams/UML-incident_faq.drawio.png)
