@@ -11,6 +11,6 @@ How to read it:
 - A dotted box marked **alt** is a choice. Only one of the bracketed cases happens.
 - A yellow note is a reminder on that step. It is not a message to another person.
 
-![UML incident hardware](diagrams/sequence/diagrams/UML-incident_hardware.drawio.png)
+![UML incident hardware](uml-diagrams/UML-incident_hardware.drawio.png)
 
 If the support team lead does not approve, the incident stays with L1.

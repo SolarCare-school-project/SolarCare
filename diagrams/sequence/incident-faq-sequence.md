@@ -11,4 +11,4 @@ How to read it:
 - A dotted box marked **alt** is a choice. Only one of the bracketed cases happens.
 - A yellow note is a reminder on that step. It is not a message to another person.
 
-![UML incident FAQ](diagrams/sequence/diagrams/UML-incident_faq.drawio.png)
+![UML incident FAQ](uml-diagrams/UML-incident_faq.drawio.png)

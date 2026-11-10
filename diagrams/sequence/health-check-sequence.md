@@ -25,7 +25,7 @@ How to read it:
 - A dotted box marked **alt** is a choice. Only one of the bracketed cases happens.
 - A yellow note is a reminder on that step. It is not a message to another person.
 
-![UML health ceck](diagrams/sequence/diagrams/UML-health_check_sequence.drawio.png)
+![UML health ceck](uml-diagrams/UML-health_check_sequence.drawio.png)
 
 
 A replacement happens only when the check says so. An incident at the home follows the incident sequences. This scheduled check does not.
