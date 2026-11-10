@@ -15,6 +15,7 @@ SolarCare processes personal data of Solar System owners: name, email, address, 
 | AWS | Processor | DPA with standard contractual clauses |
 | Email provider | Processor | DPA |
 | Regional technician company | Processor | DPA |
+| Salesforce (CRM) | Processor | DPA with standard contractual clauses |
 
 The data protection officer is external, because management and software engineers decide on the processing themselves.
 
@@ -36,6 +37,8 @@ AWS, region Frankfurt. AWS is a US company, so transfers are covered by the EU-U
 
 When SolarCare expands to larger institutions, a switch to Microsoft Azure can be considered, as many of them already use Microsoft. Azure is also a US company, so the same Data Privacy Framework applies.
 
+Customer details, cases, visits and part records are kept in Salesforce, which is also a US company. The same Data Privacy Framework and standard contractual clauses apply. Salesforce data is stored in its EU region.
+
 ### Retention
 
 | Data | Kept for | Why |
@@ -48,10 +51,12 @@ When SolarCare expands to larger institutions, a switch to Microsoft Azure can b
 | Audit log | 1 year | A misuse of access is often found late. One year lets us check who opened which home. |
 | Backups | 30 days | Lets us restore after a failure. Deleted data is also gone from backups after 30 days, which matches the deletion promise to owners. |
 
+Customer details, incidents and visits are kept in the CRM. The periods above are set as deletion rules there.
+
 ### Owner rights
 
 - Access and export of own data in the website (CSV).
-- Correction of contact details in the website.
+- Correction of contact details: the owner asks in the website, this creates a case, and support updates the CRM.
 - Deletion on request within 30 days.
 
 When a house is sold, the serial number is unlinked from the old owner first. The new owner does not see older readings.
