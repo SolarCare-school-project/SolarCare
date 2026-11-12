@@ -37,8 +37,8 @@ Priority definitions: P1 – Critical, P2 – High, P3 – Normal, P4 – Low.
 | Level | Name | Responsibility | Response SLA | Resolution SLA |
 |---|---|---|---|---|
 | **L0** | Self-service support | Provides answers to common questions and basic troubleshooting. Unresolved issues go to L1 | No individual response SLA | Self-Service |
-| **L1** | Support Engineer| First-line support and remote investigation. | P1: 1 hour; P2: 4 hours; P3: 1 business day; P4: 2 business days | P1: 2 business days; P2: 5 business days; P3: 10 business days; P4: 5 business days |
-| **L2** | Engineer (CFG) | Second-line technical and software support. | Follows incident priority SLA | P1: 2 business days; P2: 5 business days; P3: 10 business days; P4: 5 business days |
+| **L1** | Support Engineer| First-line support and remote investigation. | P1: 1 hour; P2: 4 hours; P3: 1 business day; P4: 2 business days | P1: 2 business days; P2: 5 business days; P3: 10 business days; P4: 15 business days |
+| **L2** | Engineer (CFG) | Second-line technical and software support. | Follows incident priority SLA | P1: 2 business days; P2: 5 business days; P3: 10 business days; P4: 15 business days |
 | **L3** | External Technician | On-site hardware inspection and repair. | According to partner SLA | According to partner SLA and parts availability |
 
 ## System processes
