@@ -2,13 +2,13 @@
 
 <h3>User Story 1</h3>
 
-      As a solar system owner, I want to see the current status and health of my own solar system, so that I know it is working properly and can raise an incident when something looks wrong.
+As a solar system owner, I want to see the current status and health of my own solar system, so that I know it is working properly and can raise an incident when something looks wrong.
 
-    <h4>EARS requirements for that story</h4>
+<h4>EARS requirements for that story</h4>
 
-      Event driven: When the owner opens their system in SolarCare, SolarCare shall display the current status and health of only that owner's own solar system.
+Event driven: When the owner opens their system in SolarCare, SolarCare shall display the current status and health of only that owner's own solar system.
 
-      Unwanted behaviour: If a reading is missing or outdated, then SolarCare shall mark the affected component as "no current data" instead of showing a stale value.
+Unwanted behaviour: If a reading is missing or outdated, then SolarCare shall mark the affected component as "no current data" instead of showing a stale value.
 
 <h4>How?</h4>
 
